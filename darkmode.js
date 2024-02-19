@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "/Interface/style/mainDM.css";
-      headerThemeLink.href = "/Interface/style/headerDM.css";
-      profileThemeLink.href = "/Interface/style/profileDM.css";
+      mainThemeLink.href = "./style/mainDM.css";
+      headerThemeLink.href = "./style/headerDM.css";
+      profileThemeLink.href = "./style/profileDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "/Interface/style/main.css";
-      headerThemeLink.href = "/Interface/style/header.css";
-      profileThemeLink.href = "/Interface/style/profile.css";
+      mainThemeLink.href = "./style/main.css";
+      headerThemeLink.href = "./style/header.css";
+      profileThemeLink.href = "./style/profile.css";
     }
   }
 });
@@ -59,14 +59,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "/Interface/style/mainDM.css";
-      headerThemeLink.href = "/Interface/style/headerDM.css";
-      chatThemeLink.href = "/Interface/style/chatDM.css";
+      mainThemeLink.href = "./style/mainDM.css";
+      headerThemeLink.href = "./style/headerDM.css";
+      chatThemeLink.href = "./style/chatDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "/Interface/style/main.css";
-      headerThemeLink.href = "/Interface/style/header.css";
-      chatThemeLink.href = "/Interface/style/chat.css";
+      mainThemeLink.href = "./style/main.css";
+      headerThemeLink.href = "./style/header.css";
+      chatThemeLink.href = "./style/chat.css";
     }
   }
 });
@@ -90,14 +90,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "/Interface/style/mainDM.css";
-      headerThemeLink.href = "/Interface/style/headerDM.css";
-      indexThemeLink.href = "/Interface/style/indexDM.css";
+      mainThemeLink.href = "./style/mainDM.css";
+      headerThemeLink.href = "./style/headerDM.css";
+      indexThemeLink.href = "./style/indexDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "/Interface/style/main.css";
-      headerThemeLink.href = "/Interface/style/header.css";
-      indexThemeLink.href = "/Interface/style/index.css";
+      mainThemeLink.href = "./style/main.css";
+      headerThemeLink.href = "./style/header.css";
+      indexThemeLink.href = "./style/index.css";
     }
   }
 });
