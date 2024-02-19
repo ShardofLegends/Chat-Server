@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile</title>
+
+    <link rel="stylesheet" href="/Interface/style/main.css" id="main-content-theme">
+    <link rel="stylesheet" href="/Interface/style/header.css" id="header-content-theme">
+    <link rel="stylesheet" href="/Interface/style/profile.css" id="profile-content-theme">
+
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <a href="./index.html">INDEX</a>
+            <a href="./chat.html">CHAT</a>    
+            <a href="./profile.html">PROFILE</a>
+        </div>
+
+    </header> 
+
+    <div class="profile-mainframe-flex">
+
+        <div class="profile-main-space">
+            <div>
+                <p class="profile-main-title">Your Profile</p>
+            </div>
+            <div class="profile-main-flexbox">
+
+                <div class="profile-user-flexbox">
+
+
+                    <div class="profile-user-information">
+
+                        <div class="profile-user-picture">
+
+                            <div id="profilePicture"></div>
+                            <input type="file" id="fileInput" accept="image/*">
+                        
+                        </div>
+                    
+                    </div>
+                    <div>
+                        <p></p>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+                </div>
+                <div class="profile-user-flexbox">
+
+                    <div class="profile-user-grid">
+
+                        <div class="profile-user-grid-item">
+                            <p >Your Username</p>
+                            <div class="profile-user-datafield">
+                                <p class="currentName">John Doe</p>
+                                <input type="text" class="newNameInput">
+                                <button class="editButton">Edit</button>
+                                <button class="saveButton">Save</button>
+                            </div>
+                        </div>
+
+                        <hr class="profile-user-grid-hrtag"/>
+
+                        <div class="profile-user-grid-item">
+                            <p >My Password</p>
+                            <div class="profile-user-datafield">
+                                <p class="currentName">John Doe</p>
+                                <input type="text" class="newNameInput">
+                                <button class="editButton">Edit</button>
+                                <button class="saveButton">Save</button>
+                            </div>
+                        </div>
+                        
+                        <hr class="profile-user-grid-hrtag"/>
+
+                        <div class="profile-user-grid-item">
+                            <p >Your Username</p>
+                            <div class="profile-user-datafield">
+                                <p class="currentName">Jane Doe</p>
+                                <input type="text" class="newNameInput">
+                                <button class="editButton">Edit</button>
+                                <button class="saveButton">Save</button>
+                            </div>
+                        </div>
+                        
+                        <hr class="profile-user-grid-hrtag"/>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-settings-space">
+            <div class="profile-settings-flexbox">
+                <div>
+                    <p class="profile-settings-title">Settings</p>
+                </div>
+                <div class="profile-settings-grid">
+
+                    <div class="profile-grid-placeholder"></div>
+
+                    <div class="profile-grid-item">
+                        <p>Dark Mode</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="dark-mode-toggle">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag"/>
+                    <div class="profile-grid-item">
+                        <p>Setting 2</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="toggle-switch-slider1">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag"/>
+                    <div class="profile-grid-item">
+                        <p>Setting 3</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="switch3">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag"/>
+                    <div class="profile-grid-item">
+                        <p>Setting 4</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="switch4">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag"/>
+                    <div class="profile-grid-item">
+                        <p>Setting 5</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="switch5">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag"/>
+                    <div class="profile-grid-item">
+                        <p>Background Animation</p>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="automation-switch">
+                            <span class="toggle-switch-slider round"></span>
+                        </label>
+                    </div>
+                    <hr class="profile-grid-hrtag" style="width: 80%;">
+                    <div class="profile-grid-item-bg-animated-sliders">
+                        <div class="slider">
+                            <label for="numCircles">Number&nbsp;of&nbsp;Circles:</label>
+                            <input type="range" id="numCircles" min="1" max="20" value="8" style="cursor: pointer;">
+                        </div>
+                        <div class="slider">
+                                <label for="circleSize">Circle&nbsp;Size:</label>
+                                <input type="range" id="circleSize" min="0.1" max="4.1" step="0.5" value="3" style="cursor: pointer;">
+                        </div>
+                        <div class="slider">
+                                <label for="speed">Speed:</label>
+                                <input type="range" id="speed" min="0.001" max="0.1" step="0.001" value="0.01" style="cursor: pointer;">
+                        </div>
+                        <div class="slider">
+                            <label for="blurIntensity">Blur&nbsp;Intensity:</label>
+                            <input type="range" id="blurIntensity" min="0" max="30" step="10" value="0" style="cursor: pointer;">
+                        </div>
+                    </div>
+                    <hr class="profile-grid-hrtag" style="width: 80%;">
+                    <div class="profile-grid-item-bg-animated-colors" id="color-buttons">
+                        <div id="green-button" class="color-button"></div>
+                        <div id="red-button" class="color-button"></div>
+                        <div id="blue-button" class="color-button"></div>
+                        <div id="yellow-button" class="color-button"></div>
+                        <div id="rainbow-button" class="color-button"></div>
+                        <div id="dynamic-color-button" class="color-button"></div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../script.js"></script>
+    <script src="../cookie.js"></script>
+    <script src="../darkmode.js"></script>
+    <script src="../backgroundAnimation.js"></script>
+</body>
+</html>

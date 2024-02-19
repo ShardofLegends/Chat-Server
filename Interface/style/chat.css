@@ -1,0 +1,231 @@
+
+/* CHAT MAIN */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+body {
+  background-color: rgb(226, 226, 226); /* Background color for better visibility */
+  color: black;
+}
+
+
+
+
+/* CHAT CONTENT */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+.chat-mainframe-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+
+
+
+
+/* CHAT GROUPS */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+.chat-overview-space {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 28%; 
+  height: 90%;
+
+  background-color: rgb(228, 229, 232, 0.8);
+  border-top-right-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
+  backdrop-filter: blur(5px); /* Blur behind the element */
+
+  overflow: hidden;
+}
+
+.chat-overview-flexbox{
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 110%;
+}
+
+.groups-overview-title{
+
+  font-size: 30px;
+  padding-left: 20px;
+
+  position: absolute;
+
+  z-index: 1;
+}
+
+.groups-overview-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 9% minmax(100px, auto); 
+  grid-auto-rows: minmax(100px, auto);
+  gap: 5px;
+
+  bottom: 0;
+  left: 0;
+  width: 99%;
+  height: 100%;  
+
+  overflow-y: scroll;
+
+  filter: blur(0px); /* Adjust blur radius as needed */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, black 100px);
+          mask-image: linear-gradient(to bottom, transparent 2%, black 100px);
+
+}
+
+
+.grid-item {
+
+  background-color: rgba(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+
+/* CHAT TEXTING */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+  
+.chat-text-space {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width:70%; 
+  height: 90%;
+
+  background-color: rgb(228, 229, 232, 0.8);
+  border-top-left-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
+  backdrop-filter: blur(5px); /* Blur behind the element */
+  overflow: hidden;
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+.moving-circle {
+  position: absolute;
+  background-color: #007bff; /* Circle color */
+  border-radius: 50%; /* Ensure the shape is a circle */
+  filter: blur(0px); /* Apply blur effect */
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity 3s ease-in, filter 3s ease-in, background-color 0.5s; /* Smooth transitions */
+  z-index: -1; /* Set z-index to -1 to move circles behind sliders */
+}
+.slider {
+  width: 80%;
+  padding: 10px;
+  position: relative; /* Ensure relative positioning for z-index to work */
+  z-index: 1; /* Set z-index to 1 to keep sliders in front */
+}
+.color-button {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#green-button {
+  background: #00ff00;
+}
+
+#red-button {
+  background: #ff0000;    
+}
+
+#blue-button {
+  background: #0000ff;
+}
+
+#yellow-button {
+  background: #ffff00;
+}
+
+#rainbow-button {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+}
+
+#dynamic-color-button {
+  background: linear-gradient(to right, #1e90ff, #ff69b4, #40e0d0);
+}

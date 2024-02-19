@@ -1,0 +1,426 @@
+
+/* PROFILE MAIN */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+body {
+  overflow: hidden;
+  background-color: rgb(0, 0, 0); /* Background color for better visibility */
+  color: whitesmoke;
+}
+
+
+/* PROFILE CONTENT */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+.profile-mainframe-flex {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 90%;
+}
+  
+
+
+/* PROFILE */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+.profile-main-space {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%; 
+  height: 90%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
+  backdrop-filter: blur(5px); /* Blur behind the element */
+  
+  overflow: hidden;
+}
+
+.profile-main-title {
+
+  position: absolute;
+  
+  font-size: 30px;
+  padding-left: 20px;
+  
+  z-index: 1;
+
+}
+
+.profile-main-flexbox {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 70px;
+  width: 100%;
+  height: calc(100%-70px);
+}
+
+
+
+
+/* PROFILE USER OVERVIEW */
+/*-------------------------------------------------------------------------------*/
+
+
+.profile-user-flexbox {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.profile-user-information {
+  margin: 0px;
+}
+
+.profile-user-picture {
+
+  width: 100%;
+  height: 50%;
+
+}
+
+.profile-user-username {
+  margin: 0px;
+}
+
+
+/* PROFILE PICTURE*/
+/*-------------------------------------------------------------------------------*/
+
+#profilePicture {
+
+  width: 60%; /* Adjust the size as needed */
+
+  margin: 50px auto 20px auto;
+  margin-top: 50px;
+
+  border-radius: 80%; /* This makes the image circular */
+  overflow: hidden;
+
+  background-color: #707070; /* Default background color */
+}
+
+#profilePicture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* PROFILE USER DATA */
+/*-------------------------------------------------------------------------------*/
+
+.profile-user-grid {
+  display: grid;
+
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto 1fr;
+
+  padding: 30px;
+
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;  
+}
+  
+.profile-user-grid-item {
+
+  display: flex;
+  justify-content: space-between;
+  
+  flex-direction: row;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.profile-user-grid-hrtag {
+
+  border-radius: 50px;
+  width: 100%;
+  height: 10%;
+  background-color: #707070;
+  border-width: 0px;
+  grid-column: 1 / span 3;
+
+}
+
+
+.profile-user-datafield {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 0px 0px 10px;
+  
+  width: 80%;
+
+}
+.profile-user-datafield input[type="text"] {
+  display: none;
+}
+.saveButton {
+  display: none;
+}
+
+
+  
+/* SETTINGS */
+/*-------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+
+.profile-settings-space {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28%;
+  height: 90%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-left-radius: 30px;
+  box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
+  backdrop-filter: blur(5px); /* Blur behind the element */
+
+  overflow: hidden;
+}
+  
+.profile-settings-flexbox {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+}
+  
+.profile-settings-title {
+
+  position: absolute;
+  
+  font-size: 30px;
+  padding-left: 20px;
+  
+  z-index: 1;
+
+}
+
+.profile-settings-placeholder {
+
+  position: absolute;
+  
+  font-size: 30px;
+  padding-left: 20px;
+  
+  z-index: 1;
+
+}
+  
+.profile-settings-grid {
+  display: grid;
+
+  grid-template-columns: repeat(1, 100%);
+  grid-template-rows: 7% auto;
+  
+  padding: 30px 30px 0px 30px;
+
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  
+  overflow-y: scroll;
+
+  filter: blur(0px); /* Adjust blur radius as needed */
+  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, black 100px);
+          mask-image: linear-gradient(to bottom, transparent 2%, black 100px);   
+}
+  
+.profile-grid-item {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.profile-grid-item-bg-animated-sliders {
+
+  display: grid;
+  grid-template-columns: repeat(2, 60%);
+
+
+  width: 83%;
+  height: fit-content;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  margin: auto 0px auto 0px;
+
+
+}
+
+.profile-grid-item-bg-animated-colors {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+.profile-grid-hrtag{
+
+  border-radius: 50px;
+  width: 100%;
+  height: 10%;
+  background-color: #707070;
+  border-width: 0px;
+
+}
+
+
+/* SETTINGS SWITCHES*/
+/*-------------------------------------------------------------------------------*/
+
+.switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  margin: auto 10px auto auto;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #707070;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.toggle-switch-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .toggle-switch-slider {
+  background-color: #5290c3;
+}
+
+input:focus + .toggle-switch-slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .toggle-switch-slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.toggle-switch-slider.round {
+  border-radius: 34px;
+}
+  
+.toggle-switch-slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* SETTINGS BACKGROUND*/
+/*-------------------------------------------------------------------------------*/
+
+.moving-circle {
+  position: absolute;
+  background-color: #007bff; /* Circle color */
+  border-radius: 50%; /* Ensure the shape is a circle */
+  filter: blur(0px); /* Apply blur effect */
+  opacity: 0; /* Initially set opacity to 0 */
+  transition: opacity 3s ease-in, filter 3s ease-in, background-color 0.5s; /* Smooth transitions */
+  z-index: -1; /* Set z-index to -1 to move circles behind sliders */
+}
+.slider {
+
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  width: fit-content;
+  height: fit-content;
+  
+  margin: auto;
+
+
+}
+.color-button {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#green-button {
+  background: #00ff00;
+}
+
+#red-button {
+  background: #ff0000;    
+}
+
+#blue-button {
+  background: #0000ff;
+}
+
+#yellow-button {
+  background: #ffff00;
+}
+
+#rainbow-button {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+}
+
+#dynamic-color-button {
+  background: linear-gradient(to right, #1e90ff, #ff69b4, #40e0d0);
+}
+
