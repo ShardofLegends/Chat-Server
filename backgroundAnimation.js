@@ -5,26 +5,6 @@ function applySavedValues() {
         automationSwitch = parseInt(savedAutomationSwitch);
         document.getElementById('automationSwitch').value = automationSwitch;
     }
-    const savedNumCircles = getCookie('numCircles');
-    if (savedNumCircles) {
-        numCircles = parseInt(savedNumCircles);
-        document.getElementById('numCircles').value = numCircles;
-    }
-    const savedCircleSize = getCookie('circleSize');
-    if (savedCircleSize) {
-        circleSize = parseFloat(savedCircleSize);
-        document.getElementById('circleSize').value = circleSize;
-    }
-    const savedSpeed = getCookie('speed');
-    if (savedSpeed) {
-        speed = parseFloat(savedSpeed);
-        document.getElementById('speed').value = speed;
-    }
-    const savedBlurIntensity = getCookie('blurIntensity');
-    if (savedBlurIntensity) {
-        blurIntensity = parseInt(savedBlurIntensity);
-        document.getElementById('blurIntensity').value = blurIntensity; // Set slider value
-    }
 
     // Apply blur intensity immediately when page is loaded
     applyBlurIntensity();
@@ -54,45 +34,9 @@ document.getElementById('automationSwitch').addEventListener('input', function()
     toggleAnimationButton(); // Turn on animation when slider is changed
 });
 
-// Event listener for numCircles slider
-document.getElementById('numCircles').addEventListener('input', function() {
-    numCircles = parseInt(this.value);
-    setCookie('numCircles', numCircles, 7); // Save value to cookie
-    resetCircles();
-    animateCircleAppearance();
-    turnOnAnimation(); // Turn on animation when slider is changed
-});
-
-// Event listener for circleSize slider
-document.getElementById('circleSize').addEventListener('input', function() {
-    circleSize = parseFloat(this.value);
-    setCookie('circleSize', circleSize, 7); // Save value to cookie
-    resetCircles();
-    animateCircleAppearance();
-    turnOnAnimation(); // Turn on animation when slider is changed
-});
-
-// Event listener for speed slider
-document.getElementById('speed').addEventListener('input', function() {
-    speed = parseFloat(this.value);
-    setCookie('speed', speed, 7); // Save value to cookie
-    resetCircles();
-    animateCircleAppearance();
-    turnOnAnimation(); // Turn on animation when slider is changed
-});
-
-// Event listener for blurIntensity slider
-document.getElementById('blurIntensity').addEventListener('input', function() {
-    blurIntensity = parseInt(this.value);
-    setCookie('blurIntensity', blurIntensity, 7); // Save value to cookie
-    resetCircles();
-    animateCircleAppearance();
-    turnOnAnimation(); // Turn on animation when slider is changed
-});
-
 // Event listeners for color buttons
 document.getElementById('green-button').addEventListener('click', function() {
-    changeCircleColor('#00ff00');
+    changeCircleColor('#1eff00');
     setCookie('color', 'green', 7); // Save value to cookie
     removeSelectedClass();
     this.classList.add('selected');
@@ -115,14 +59,6 @@ document.getElementById('blue-button').addEventListener('click', function() {
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
 
-document.getElementById('yellow-button').addEventListener('click', function() {
-    changeCircleColor('yellow');
-    setCookie('color', 'yellow', 7); // Save value to cookie
-    removeSelectedClass();
-    this.classList.add('selected');
-    turnOnAnimation(); // Turn on animation when color button is clicked
-});
-
 document.getElementById('rainbow-button').addEventListener('click', function() {
     changeCircleColorToRainbow();
     setCookie('color', 'rainbow', 7); // Save value to cookie
@@ -131,9 +67,17 @@ document.getElementById('rainbow-button').addEventListener('click', function() {
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
 
-document.getElementById('dynamic-color-button').addEventListener('click', function() {
-    changeCircleColorToDynamic();
-    setCookie('color', 'dynamic', 7); // Save value to cookie
+document.getElementById('dynamic-pinkbluecyan-color-button').addEventListener('click', function() {
+    changeCircleColorToDynamicPinkbluecyan();
+    setCookie('color', 'dynamic-pinkbluecyan', 7); // Save value to cookie
+    removeSelectedClass();
+    this.classList.add('selected');
+    turnOnAnimation(); // Turn on animation when color button is clicked
+});
+
+document.getElementById('dynamic-northernlights-color-button').addEventListener('click', function() {
+    changeCircleColorToDynamicNorthernlights();
+    setCookie('color', 'dynamic-northernlights', 7); // Save value to cookie
     removeSelectedClass();
     this.classList.add('selected');
     turnOnAnimation(); // Turn on animation when color button is clicked
@@ -141,12 +85,11 @@ document.getElementById('dynamic-color-button').addEventListener('click', functi
 
 
 
-let automationSwitch; // Number of state of automationSwitch
-let numCircles;  // Number of circles
-let circleSize; // Size of the circle
-let speed; // Speed of the circle
-let blurIntensity; // Initial blur intensity
-let speedDirection; // Initialize speed direction
+let automationSwitch = true; // Number of state of automationSwitch
+let numCircles = 20;  // Number of circles
+let circleSize = 8; // Size of the circle
+let speed = 0.08;// Speed of the circle
+let blurIntensity = 70; // Initial blur intensity
 const circles = [];
 
 
@@ -203,8 +146,8 @@ function animateCircles() {
         const deltaY = amplitudeY * Math.cos(frequencyY * time);
 
         // Multiply by speed here
-        posX += deltaX * speed * speedDirection;
-        posY += deltaY * speed * speedDirection;
+        posX += deltaX * speed;
+        posY += deltaY * speed;
 
         // Wrap around screen edges
         if (posX > screenWidth + circleSizeValue) posX = -circleSizeValue;
@@ -221,7 +164,7 @@ function animateCircles() {
 
         // Randomly change direction
         if (time % changeDirectionInterval === 0) {
-            speedDirection *= Math.random() < 0.5 ? -1 : 1; // Adjusting speed direction
+            speed *= Math.random() < 0.5 ? -1 : 1; // Adjusting speed direction
         }
 
         // Randomly change size
@@ -269,8 +212,10 @@ function offCircles() {
 function setInitialColor() {
     const lastColor = getCookie('color');
     if (lastColor) {
-        if (lastColor === 'dynamic') {
-            changeCircleColorToDynamic();
+        if (lastColor === 'dynamic-northernlights') {
+            changeCircleColorToDynamicNorthernlights();
+        } else if (lastColor === 'dynamic-pinkbluecyan') {
+            changeCircleColorToDynamicPinkbluecyan();
         } else if (lastColor === 'rainbow') {
             changeCircleColorToRainbow();
         } else {
@@ -284,11 +229,19 @@ function setInitialColor() {
     }
 }
 
-let dynamicColorInterval; // Declare a variable to hold the interval for dynamic color change
+let dynamicPinkbluecyanColorInterval; // Declare a variable to hold the interval for dynamicPinkbluecyan color change
+let dynamicNorthernlightsColorInterval;  // Declare a variable to hold the interval for dynamicNorthernlights color change
+
 let rainbowColorInterval; // Declare a variable to hold the interval for rainbow color change
 
 function changeCircleColor(color) {
     stopColorChange(); // Stop any running color change interval
+
+    numCircles = 20;  // Number of circles
+    circleSize = 5; // Size of the circle
+    speed = 0.15;// Speed of the circle
+    blurIntensity = 8; // Initial blur intensity
+
     circles.forEach(circle => {
         circle.element.style.backgroundColor = color;
     });
@@ -298,6 +251,12 @@ function changeCircleColorToRainbow() {
     stopColorChange(); // Stop any running color change interval
     let hue = 0;
     const colorInterval = 0.3; // Adjust this value to change the speed of color transition
+
+    numCircles = 20;  // Number of circles
+    circleSize = 5; // Size of the circle
+    speed = 0.1;// Speed of the circle
+    blurIntensity = 40; // Initial blur intensity
+
     rainbowColorInterval = setInterval(() => {
         circles.forEach(circle => {
             hue = (hue + colorInterval) % 360;
@@ -307,9 +266,30 @@ function changeCircleColorToRainbow() {
     }, 200); // Adjust the interval to control the speed of color transition
 }
 
-function changeCircleColorToDynamic() {
+function changeCircleColorToDynamicPinkbluecyan() {
     stopColorChange(); // Stop any running color change interval
     const colors = ['#1e90ff', '#ff69b4', '#40e0d0']; // Dark blue, bright pink, turquoise
+
+    numCircles = 12;  // Number of circles
+    circleSize = 8; // Size of the circle
+    speed = 0.1;// Speed of the circle
+    blurIntensity = 60; // Initial blur intensity
+
+    circles.forEach((circle, index) => {
+        const colorIndex = index % colors.length;
+        circle.element.style.backgroundColor = colors[colorIndex];
+    });
+}
+
+function changeCircleColorToDynamicNorthernlights() {
+    stopColorChange(); // Stop any running color change interval
+    const colors = ['#00eeac', '#00cbad', '#1f82a7', '#524094', '#562a84']; // Northen Lights Colors
+
+    numCircles = 35;  // Number of circles
+    circleSize = 10; // Size of the circle
+    speed = 0.09;// Speed of the circle
+    blurIntensity = 80; // Initial blur intensity
+
     circles.forEach((circle, index) => {
         const colorIndex = index % colors.length;
         circle.element.style.backgroundColor = colors[colorIndex];
@@ -317,7 +297,8 @@ function changeCircleColorToDynamic() {
 }
 
 function stopColorChange() {
-    clearInterval(dynamicColorInterval); // Stop dynamic color change interval
+    clearInterval(dynamicPinkbluecyanColorInterval); // Stop dynamicPinkbluecyan color change interval
+    clearInterval(dynamicNorthernlightsColorInterval); // Stop dynamicNorthernlights color change interval
     clearInterval(rainbowColorInterval); // Stop rainbow color change interval
 }
 

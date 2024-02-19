@@ -126,7 +126,7 @@ body {
   border-style: solid hidden hidden solid;
   border-color: rgba(196, 196, 196, 0.329);
 
-  background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
   backdrop-filter: blur(150px); /* Blur behind the element */
 
   overflow: hidden;

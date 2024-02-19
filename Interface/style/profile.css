@@ -5,7 +5,7 @@
 
 body {
   overflow: hidden;
-  background-color: rgb(226, 226, 226); /* Background color for better visibility */
+  background-color: rgb(255, 255, 255); /* Background color for better visibility */
   color: black;
   transition: all 0.1s ease-in-out;
 }
@@ -204,7 +204,7 @@ body {
   border-style: solid hidden hidden solid;
   border-color: rgba(196, 196, 196, 0.329);
 
-  background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
   backdrop-filter: blur(150px); /* Blur behind the element */
 
   overflow: hidden;
@@ -244,7 +244,7 @@ body {
   display: grid;
 
   grid-template-columns: repeat(1, 100%);
-  grid-template-rows: 7% auto;
+  grid-template-rows: 7% repeat(5, auto 0fr);
   
   padding: 30px 30px 0px 30px;
 
@@ -269,22 +269,10 @@ body {
 
 }
 
-.profile-grid-item-bg-animated-sliders {
-
-  display: grid;
-  grid-template-columns: repeat(2, 60%);
-
-
-  width: 83%;
-  height: fit-content;
-
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+.profile-switch-title{
   margin: auto 0px auto 0px;
-
-
 }
+
 
 .profile-grid-item-bg-animated-colors {
 
@@ -424,15 +412,14 @@ input:checked + .toggle-switch-slider:before {
   background: #0000ff;
 }
 
-#yellow-button {
-  background: #ffff00;
-}
-
 #rainbow-button {
-  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+  background: radial-gradient(circle at 0, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
 }
 
-#dynamic-color-button {
-  background: linear-gradient(to right, #1e90ff, #ff69b4, #40e0d0);
+#dynamic-pinkbluecyan-color-button {
+  background: linear-gradient(0deg, #1e90ff, #ff69b4, #40e0d0);
 }
 
+#dynamic-northernlights-color-button {
+  background: linear-gradient(170deg, #00eeac, #00cbad, #1f82a7, #524094, #562a84);
+}

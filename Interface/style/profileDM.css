@@ -287,6 +287,10 @@ body {
 
 }
 
+.profile-switch-title{
+  margin: auto 0px auto 0px;
+}
+
 .profile-grid-item-bg-animated-colors {
 
   display: flex;
@@ -425,15 +429,14 @@ input:checked + .toggle-switch-slider:before {
   background: #0000ff;
 }
 
-#yellow-button {
-  background: #ffff00;
-}
-
 #rainbow-button {
   background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
 }
 
-#dynamic-color-button {
+#dynamic-pinkbluecyan-color-button {
   background: linear-gradient(to right, #1e90ff, #ff69b4, #40e0d0);
 }
 
+#dynamic-northernlights-color-button {
+  background: linear-gradient(to right, #00eeac, #00cbad, #1f82a7, #524094, #562a84);
+}
