@@ -1,6 +1,10 @@
-
 // Apply saved values from cookies to sliders
 function applySavedValues() {
+    const savedAutomationSwitch = getCookie('automationSwitch');
+    if (savedAutomationSwitch) {
+        automationSwitch = parseInt(savedAutomationSwitch);
+        document.getElementById('automationSwitch').value = automationSwitch;
+    }
     const savedNumCircles = getCookie('numCircles');
     if (savedNumCircles) {
         numCircles = parseInt(savedNumCircles);
@@ -36,13 +40,6 @@ function applySavedValues() {
 }
 
 
-let numCircles; // Number of circles
-let circleSize; // Size of the circle
-let speed; // Speed of the circle
-let blurIntensity; // Initial blur intensity
-let speedDirection = 1; // Initialize speed direction
-const circles = [];
-
 // Event listeners for sliders to update variables and restart animation
 document.addEventListener("DOMContentLoaded", function() {
     applySavedValues(); // Apply saved values from cookies
@@ -50,10 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
     toggleAnimationButton(); // Generate circles based on the state of the animation switch
 });
 
-// Event listener for automation-switch slider
-document.getElementById('automation-switch').addEventListener('change', function() {
-    toggleAnimationButton();
-});    
+// Event listener for automationSwitch slider
+document.getElementById('automationSwitch').addEventListener('input', function() {
+    automationSwitch = parseInt(this.value);
+    setCookie('automationSwitch', automationSwitch, 7); // Save value to cookie
+    toggleAnimationButton(); // Turn on animation when slider is changed
+});
 
 // Event listener for numCircles slider
 document.getElementById('numCircles').addEventListener('input', function() {
@@ -139,6 +138,18 @@ document.getElementById('dynamic-color-button').addEventListener('click', functi
     this.classList.add('selected');
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
+
+
+
+let automationSwitch; // Number of state of automationSwitch
+let numCircles;  // Number of circles
+let circleSize; // Size of the circle
+let speed; // Speed of the circle
+let blurIntensity; // Initial blur intensity
+let speedDirection; // Initialize speed direction
+const circles = [];
+
+
 
 // Remove selected class from all color buttons
 function removeSelectedClass() {
@@ -319,12 +330,12 @@ function applyBlurIntensity() {
 }
 
 function turnOnAnimation() {
-    document.getElementById('automation-switch').checked = true; // Turn on the animation switch
+    document.getElementById('automationSwitch').checked = true; // Turn on the animation switch
     toggleAnimationButton(); // Generate circles
 }
 
 function toggleAnimationButton() {
-    const animationSwitch = document.getElementById('automation-switch');
+    const animationSwitch = document.getElementById('automationSwitch');
     if (animationSwitch.checked) {
         resetCircles(); // Generate circles if the switch is on
         animateCircleAppearance();

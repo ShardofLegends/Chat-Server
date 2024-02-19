@@ -241,9 +241,8 @@ body {
 
   overflow-y: scroll;
 
-  filter: blur(0px); /* Adjust blur radius as needed */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, black 100px);
-          mask-image: linear-gradient(to bottom, transparent 2%, black 100px);   
+  -webkit-mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
+          mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
 }
   
 .profile-grid-item {

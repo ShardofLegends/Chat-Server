@@ -237,15 +237,14 @@ body {
 
   bottom: 0;
   right: 0;
-  height: 100%;
-  
+  height: 100%;  
+
   overflow-y: scroll;
 
-  filter: blur(0px); /* Adjust blur radius as needed */
-  -webkit-mask-image: linear-gradient(to bottom, transparent 2%, black 100px);
-          mask-image: linear-gradient(to bottom, transparent 2%, black 100px);   
+  -webkit-mask-image: linear-gradient(to bottom, transparent 6%, black 120px);
+          mask-image: linear-gradient(to bottom, transparent 6%, black 120px);
 }
-  
+
 .profile-grid-item {
 
   display: flex;
