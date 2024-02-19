@@ -14,10 +14,13 @@
     right: 0;
     width: 100%;
     height: 8%;
-  
-    background-color: rgba(0, 0, 0, 0.7);
-    box-shadow: 0 8px 32px 0px rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-    backdrop-filter: blur(5px); /* Blur behind the element */
+
+    border-width: 1px;
+    border-style: hidden hidden solid hidden;
+    border-color: rgba(65, 65, 65, 0.5);
+
+    background-image: linear-gradient(175deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+    backdrop-filter: blur(150px); /* Blur behind the element */
   
     overflow: hidden;
 }

@@ -4,7 +4,7 @@
 /*-------------------------------------------------------------------------------*/
 
 body {
-  background-color: rgb(226, 226, 226); /* Background color for better visibility */
+  background-color: rgb(255, 255, 255); /* Background color for better visibility */
   color: black;
 
   margin: 0;
@@ -41,10 +41,16 @@ body {
   width: 28%; 
   height: 90%;
 
-  background-color: rgb(228, 229, 232, 0.8);
   border-top-right-radius: 30px;
+
   box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-  backdrop-filter: blur(5px); /* Blur behind the element */
+  
+  border-width: 1px;
+  border-style: solid solid hidden hidden;
+  border-color: rgba(196, 196, 196, 0.329);
+
+  background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(150px); /* Blur behind the element */
 
   overflow: hidden;
 }
@@ -112,10 +118,17 @@ body {
   width:70%; 
   height: 90%;
 
-  background-color: rgb(228, 229, 232, 0.8);
   border-top-left-radius: 30px;
+
   box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-  backdrop-filter: blur(5px); /* Blur behind the element */
+  
+  border-width: 1px;
+  border-style: solid hidden hidden solid;
+  border-color: rgba(196, 196, 196, 0.329);
+
+  background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(150px); /* Blur behind the element */
+
   overflow: hidden;
 }
 
