@@ -35,21 +35,6 @@ document.getElementById('automationSwitch').addEventListener('input', function()
 });
 
 // Event listeners for color buttons
-document.getElementById('green-button').addEventListener('click', function() {
-    changeCircleColor('#1eff00');
-    setCookie('color', 'green', 7); // Save value to cookie
-    removeSelectedClass();
-    this.classList.add('selected');
-    turnOnAnimation(); // Turn on animation when color button is clicked
-});
-
-document.getElementById('red-button').addEventListener('click', function() {
-    changeCircleColor('red');
-    setCookie('color', 'red', 7); // Save value to cookie
-    removeSelectedClass();
-    this.classList.add('selected');
-    turnOnAnimation(); // Turn on animation when color button is clicked
-});
 
 document.getElementById('blue-button').addEventListener('click', function() {
     changeCircleColor('blue');
@@ -59,17 +44,17 @@ document.getElementById('blue-button').addEventListener('click', function() {
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
 
-document.getElementById('rainbow-button').addEventListener('click', function() {
-    changeCircleColorToRainbow();
-    setCookie('color', 'rainbow', 7); // Save value to cookie
+document.getElementById('dynamic-rainbow-button').addEventListener('click', function() {
+    changeCircleColorToDynamicRainbow();
+    setCookie('color', 'dynamic-rainbow', 7); // Save value to cookie
     removeSelectedClass();
     this.classList.add('selected');
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
 
-document.getElementById('dynamic-pinkbluecyan-color-button').addEventListener('click', function() {
-    changeCircleColorToDynamicPinkbluecyan();
-    setCookie('color', 'dynamic-pinkbluecyan', 7); // Save value to cookie
+document.getElementById('static-rainbow-button').addEventListener('click', function() {
+    changeCircleColorToStaticRainbow();
+    setCookie('color', 'static-rainbow', 7); // Save value to cookie
     removeSelectedClass();
     this.classList.add('selected');
     turnOnAnimation(); // Turn on animation when color button is clicked
@@ -83,7 +68,29 @@ document.getElementById('dynamic-northernlights-color-button').addEventListener(
     turnOnAnimation(); // Turn on animation when color button is clicked
 });
 
+document.getElementById('dynamic-sunsetfeeling-color-button').addEventListener('click', function() {
+    changeCircleColorToSunsetfeeling();
+    setCookie('color', 'dynamic-sunsetfeeling', 7); // Save value to cookie
+    removeSelectedClass();
+    this.classList.add('selected');
+    turnOnAnimation(); // Turn on animation when color button is clicked
+});
 
+document.getElementById('dynamic-snowymountain-color-button').addEventListener('click', function() {
+    changeCircleColorToSnowymountainfeeling();
+    setCookie('color', 'dynamic-snowymountain', 7); // Save value to cookie
+    removeSelectedClass();
+    this.classList.add('selected');
+    turnOnAnimation(); // Turn on animation when color button is clicked
+});
+
+document.getElementById('dynamic-pinkbluecyan-color-button').addEventListener('click', function() {
+    changeCircleColorToDynamicPinkbluecyan();
+    setCookie('color', 'dynamic-pinkbluecyan', 7); // Save value to cookie
+    removeSelectedClass();
+    this.classList.add('selected');
+    turnOnAnimation(); // Turn on animation when color button is clicked
+});
 
 let automationSwitch = true; // Number of state of automationSwitch
 let numCircles = 20;  // Number of circles
@@ -214,10 +221,16 @@ function setInitialColor() {
     if (lastColor) {
         if (lastColor === 'dynamic-northernlights') {
             changeCircleColorToDynamicNorthernlights();
+        } else if (lastColor === 'dynamic-sunsetfeeling') {
+            changeCircleColorToSunsetfeeling();
+        } else if (lastColor === 'dynamic-snowymountain') {
+            changeCircleColorToSnowymountainfeeling();
         } else if (lastColor === 'dynamic-pinkbluecyan') {
             changeCircleColorToDynamicPinkbluecyan();
-        } else if (lastColor === 'rainbow') {
-            changeCircleColorToRainbow();
+        } else if (lastColor === 'dynamic-rainbow') {
+            changeCircleColorToDynamicRainbow();
+        } else if (lastColor === 'static-rainbow') {
+            changeCircleColorToStaticRainbow();
         } else {
             changeCircleColor(lastColor);
         }
@@ -229,10 +242,13 @@ function setInitialColor() {
     }
 }
 
-let dynamicPinkbluecyanColorInterval; // Declare a variable to hold the interval for dynamicPinkbluecyan color change
+let dynamicRainbowColorInterval; // Declare a variable to hold the interval for rainbow color change
+let staticRainbowColorInterval; // Declare a variable to hold the interval for rainbow color change
 let dynamicNorthernlightsColorInterval;  // Declare a variable to hold the interval for dynamicNorthernlights color change
+let dynamicSunsetfeelingColorInterval; // Declare a variable to hold the interval for dynamicSunsetfeeling color change
+let dynamicSnowymountainColorInterval; // Declare a variable to hold the interval for dynamicSnowymountain color change
+let dynamicPinkbluecyanColorInterval; // Declare a variable to hold the interval for dynamicPinkbluecyan color change
 
-let rainbowColorInterval; // Declare a variable to hold the interval for rainbow color change
 
 function changeCircleColor(color) {
     stopColorChange(); // Stop any running color change interval
@@ -247,7 +263,7 @@ function changeCircleColor(color) {
     });
 }
 
-function changeCircleColorToRainbow() {
+function changeCircleColorToDynamicRainbow() {
     stopColorChange(); // Stop any running color change interval
     let hue = 0;
     const colorInterval = 0.3; // Adjust this value to change the speed of color transition
@@ -257,13 +273,28 @@ function changeCircleColorToRainbow() {
     speed = 0.1;// Speed of the circle
     blurIntensity = 40; // Initial blur intensity
 
-    rainbowColorInterval = setInterval(() => {
+    dynamicRainbowColorInterval = setInterval(() => {
         circles.forEach(circle => {
             hue = (hue + colorInterval) % 360;
             const color = `hsl(${hue}, 100%, 50%)`; // Generate color in HSL format
             circle.element.style.backgroundColor = color;
         });
-    }, 200); // Adjust the interval to control the speed of color transition
+    }, 300); // Adjust the interval to control the speed of color transition
+}
+
+function changeCircleColorToStaticRainbow() {
+    stopColorChange(); // Stop any running color change interval
+    const colors = ['#0000ff', '#ff0000', '#00ff00']; // Rainbow Feeling Colors
+
+    numCircles = 35;  // Number of circles
+    circleSize = 6; // Size of the circle
+    speed = 0.09;// Speed of the circle
+    blurIntensity = 80; // Initial blur intensity
+
+    circles.forEach((circle, index) => {
+        const colorIndex = index % colors.length;
+        circle.element.style.backgroundColor = colors[colorIndex];
+    });
 }
 
 function changeCircleColorToDynamicPinkbluecyan() {
@@ -283,7 +314,7 @@ function changeCircleColorToDynamicPinkbluecyan() {
 
 function changeCircleColorToDynamicNorthernlights() {
     stopColorChange(); // Stop any running color change interval
-    const colors = ['#00eeac', '#00cbad', '#1f82a7', '#524094', '#562a84']; // Northen Lights Colors
+    const colors = ['#00eeac', '#00cbad', '#1f82a7', '#524094', '#562a84']; // Northernlights Colors
 
     numCircles = 35;  // Number of circles
     circleSize = 10; // Size of the circle
@@ -296,10 +327,41 @@ function changeCircleColorToDynamicNorthernlights() {
     });
 }
 
+function changeCircleColorToSunsetfeeling() {
+    stopColorChange(); // Stop any running color change interval
+    const colors = ['#1f2e52', '#401f52', '#ab1b76', '#C23249', '#de4d14']; // Sunsetfeeling Colors
+    numCircles = 35;  // Number of circles
+    circleSize = 10; // Size of the circle
+    speed = 0.09;// Speed of the circle
+    blurIntensity = 80; // Initial blur intensity
+
+    circles.forEach((circle, index) => {
+        const colorIndex = index % colors.length;
+        circle.element.style.backgroundColor = colors[colorIndex];
+    });
+}
+
+function changeCircleColorToSnowymountainfeeling() {
+    stopColorChange(); // Stop any running color change interval
+    const colors = ['#627399', '#374c81', '#1e2d5d', '#f4efd9', '#8da4d0']; // Snowymountain feeling Colors
+    numCircles = 35;  // Number of circles
+    circleSize = 10; // Size of the circle
+    speed = 0.09;// Speed of the circle
+    blurIntensity = 80; // Initial blur intensity
+
+    circles.forEach((circle, index) => {
+        const colorIndex = index % colors.length;
+        circle.element.style.backgroundColor = colors[colorIndex];
+    });
+}
+
 function stopColorChange() {
-    clearInterval(dynamicPinkbluecyanColorInterval); // Stop dynamicPinkbluecyan color change interval
+    clearInterval(dynamicRainbowColorInterval); // Stop rainbow color change interval
+    clearInterval(staticRainbowColorInterval); // Stop rainbow color change interval
     clearInterval(dynamicNorthernlightsColorInterval); // Stop dynamicNorthernlights color change interval
-    clearInterval(rainbowColorInterval); // Stop rainbow color change interval
+    clearInterval(dynamicSunsetfeelingColorInterval); // Stop dynamicSunsetfeeling color change interval
+    clearInterval(dynamicSnowymountainColorInterval); // Stop dynamicSnowymountainfeeling color change interval
+    clearInterval(dynamicPinkbluecyanColorInterval); // Stop dynamicPinkbluecyan color change interval
 }
 
 

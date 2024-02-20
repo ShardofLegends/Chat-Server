@@ -400,26 +400,31 @@ input:checked + .toggle-switch-slider:before {
   cursor: pointer;
 }
 
-#green-button {
-  background: #00ff00;
-}
-
-#red-button {
-  background: #ff0000;    
-}
 
 #blue-button {
   background: #0000ff;
 }
 
-#rainbow-button {
+#dynamic-rainbow-button {
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+}
+
+#static-rainbow-button {
   background: radial-gradient(circle at 0, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+}
+
+#dynamic-northernlights-color-button {
+  background: linear-gradient(0deg, #562a84, #524094, #1f82a7, #00cbad, #00eeac);
+}
+
+#dynamic-sunsetfeeling-color-button {
+  background: linear-gradient(0deg, #2e227a, #591a84, #8c2c6d, #c7436b, #ff621f, #e4ba2f);
+}
+
+#dynamic-snowymountain-color-button {
+  background: linear-gradient(0deg, #1e2d5d, #374c81, #627399, #8da4d0, #f4efd9, #ffffff);
 }
 
 #dynamic-pinkbluecyan-color-button {
   background: linear-gradient(0deg, #1e90ff, #ff69b4, #40e0d0);
-}
-
-#dynamic-northernlights-color-button {
-  background: linear-gradient(170deg, #00eeac, #00cbad, #1f82a7, #524094, #562a84);
 }
