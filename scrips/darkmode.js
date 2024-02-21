@@ -1,9 +1,9 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const darkModeSwitch = document.getElementById('dark-mode-toggle');
-  
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeSwitch = document.getElementById("dark-mode-toggle");
+
   if (darkModeSwitch) {
     // Load dark mode switch state from cookies
-    const darkModeState = getCookie('darkModeEnabled');
+    const darkModeState = getCookie("darkModeEnabled");
     if (darkModeState === "true") {
       darkModeSwitch.checked = true;
     } else {
@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", function() {
     applyTheme(darkModeSwitch.checked);
 
     // Add event listener to save dark mode switch state when changed
-    darkModeSwitch.addEventListener('change', function() {
-      setCookie('darkModeEnabled', this.checked, 365);
+    darkModeSwitch.addEventListener("change", function () {
+      setCookie("darkModeEnabled", this.checked, 365);
       applyTheme(this.checked);
     });
   }
@@ -40,11 +40,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
 // chat.html
 
-document.addEventListener("DOMContentLoaded", function() {
-  const darkModeState = getCookie('darkModeEnabled');
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeState = getCookie("darkModeEnabled");
   if (darkModeState === "true") {
     applyTheme(true);
   } else {
@@ -71,11 +70,10 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 });
 
-
 // index.html
 
-document.addEventListener("DOMContentLoaded", function() {
-  const darkModeState = getCookie('darkModeEnabled');
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeState = getCookie("darkModeEnabled");
   if (darkModeState === "true") {
     applyTheme(true);
   } else {
@@ -101,5 +99,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 });
-
-  
