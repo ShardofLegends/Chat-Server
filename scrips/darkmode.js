@@ -28,14 +28,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "./style/mainDM.css";
-      headerThemeLink.href = "./style/headerDM.css";
-      profileThemeLink.href = "./style/profileDM.css";
+      mainThemeLink.href = "./style/main/mainDM.css";
+      headerThemeLink.href = "./style/header/headerDM.css";
+      profileThemeLink.href = "./style/profile/profileDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "./style/main.css";
-      headerThemeLink.href = "./style/header.css";
-      profileThemeLink.href = "./style/profile.css";
+      mainThemeLink.href = "./style/main/main.css";
+      headerThemeLink.href = "./style/header/header.css";
+      profileThemeLink.href = "./style/profile/profile.css";
     }
   }
 });
@@ -58,14 +58,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "./style/mainDM.css";
-      headerThemeLink.href = "./style/headerDM.css";
-      chatThemeLink.href = "./style/chatDM.css";
+      mainThemeLink.href = "./style/main/mainDM.css";
+      headerThemeLink.href = "./style/header/headerDM.css";
+      chatThemeLink.href = "./style/chat/chatDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "./style/main.css";
-      headerThemeLink.href = "./style/header.css";
-      chatThemeLink.href = "./style/chat.css";
+      mainThemeLink.href = "./style/main/main.css";
+      headerThemeLink.href = "./style/header/header.css";
+      chatThemeLink.href = "./style/chat/chat.css";
     }
   }
 });
@@ -88,14 +88,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "./style/mainDM.css";
-      headerThemeLink.href = "./style/headerDM.css";
-      indexThemeLink.href = "./style/indexDM.css";
+      mainThemeLink.href = "./style/main/mainDM.css";
+      headerThemeLink.href = "./style/header/headerDM.css";
+      indexThemeLink.href = "./style/index/indexDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "./style/main.css";
-      headerThemeLink.href = "./style/header.css";
-      indexThemeLink.href = "./style/index.css";
+      mainThemeLink.href = "./style/main/main.css";
+      headerThemeLink.href = "./style/header/header.css";
+      indexThemeLink.href = "./style/index/index.css";
     }
   }
 });
+
+// login.html
+
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeState = getCookie("darkModeEnabled");
+  if (darkModeState === "true") {
+    applyTheme(true);
+  } else {
+    applyTheme(false);
+  }
+
+  // Function to apply theme
+  function applyTheme(darkModeEnabled) {
+    const mainThemeLink = document.getElementById("main-content-theme");
+    const headerThemeLink = document.getElementById("header-content-theme");
+    const loginThemeLink = document.getElementById("login-content-theme");
+
+    if (darkModeEnabled) {
+      // Dark mode is enabled, switch to dark mode CSS
+      mainThemeLink.href = "./style/main/mainDM.css";
+      headerThemeLink.href = "./style/header/headerDM.css";
+      loginThemeLink.href = "./style/login/loginDM.css";
+    } else {
+      // Dark mode is disabled, switch back to default CSS
+      mainThemeLink.href = "./style/main/main.css";
+      headerThemeLink.href = "./style/header/header.css";
+      loginThemeLink.href = "./style/login/loginDM.css";
+    }
+  }
+});
+
+
+// signup.html
+
+document.addEventListener("DOMContentLoaded", function () {
+  const darkModeState = getCookie("darkModeEnabled");
+  if (darkModeState === "true") {
+    applyTheme(true);
+  } else {
+    applyTheme(false);
+  }
+
+  // Function to apply theme
+  function applyTheme(darkModeEnabled) {
+    const mainThemeLink = document.getElementById("main-content-theme");
+    const headerThemeLink = document.getElementById("header-content-theme");
+    const signupThemeLink = document.getElementById("signup-content-theme");
+
+    if (darkModeEnabled) {
+      // Dark mode is enabled, switch to dark mode CSS
+      mainThemeLink.href = "./style/main/mainDM.css";
+      headerThemeLink.href = "./style/header/headerDM.css";
+      signupThemeLink.href = "./style/signup/signupDM.css";
+    } else {
+      // Dark mode is disabled, switch back to default CSS
+      mainThemeLink.href = "./style/main/main.css";
+      headerThemeLink.href = "./style/header/header.css";
+      signupThemeLink.href = "./style/signup/signup.css";
+    }
+  }
+});
+
