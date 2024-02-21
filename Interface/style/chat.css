@@ -140,10 +140,61 @@ body {
   height: 90%;
 }
 
+.chat-details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten hinzufügen */
+  padding: 20px;
+}
 
+.chat-header {
+  text-align: center;
+}
 
+.chat-title {
+  font-size: 24px;
+}
 
+.message-container {
+  height: calc(100% - 100px); /* Höhe der Nachrichtenbereichs anpassen */
+  overflow-y: scroll; /* Scrollen ermöglichen */
+}
 
+.message-input {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 2.7%;
+  margin-right: 2.7%;
+}
+
+.message-input input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
+}
+
+.message-input button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
+}
+
+.message-input button:hover {
+  background-color: #0056b3; /* Hervorgehobene Farbe beim Hover-Effekt */
+}
 
 
 
