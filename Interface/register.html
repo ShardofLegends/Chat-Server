@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webleb - Register</title>
+    <link rel="stylesheet" href="./style/login/login.css" />
+    <link
+      rel="stylesheet"
+      href="./style/main/main.css"
+      id="main-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/header/header.css"
+      id="header-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/chat/chat.css"
+      id="chat-content-theme"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <a href="./index.html">INDEX</a>
+        <a href="./chat.html">CHAT</a>
+        <a href="./profile.html">PROFILE</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./register.html">REGISTER</a>
+      </div>
+    </header>
+
+    <div style="margin-left: 120%"></div>
+
+    <div class="register-page">
+      <div class="form">
+        <form class="register-form" action="http://localhost:3000/sign_up" method="POST">
+            <h2>Register</h2>
+            <input type="text" id="fullName" name="fullname" placeholder="Full Name *" required />
+            <input type="text" id="username" name="username" placeholder="Username *" required />
+            <input type="email" id="email" name="email" placeholder="Email *" required />
+            <input type="password" id="password" name="password" placeholder="Password *" required />
+            <input type="submit" id="submitDetails" name="submitDetails" value="Create" class="btn" />
+            <p class="message">Already registered? <a href="./login.html">Sign In</a></p>
+          </form>
+      </div>
+    </div>
+
+    <script src="../scrips/register.js"></script>
+    <script src="../scrips/cookie.js"></script>
+  </body>
+</html>
