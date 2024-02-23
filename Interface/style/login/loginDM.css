@@ -1,11 +1,7 @@
-/* main.css */
-
-@import url(https://fonts.googleapis.com/css?family=Poppins:300);
-
 body {
   overflow: hidden;
-  background-color: rgb(226, 226, 226); /* Background color for better visibility */
-  color: black;
+  background-color: rgb(0, 0, 0); /* Background color for better visibility */
+  color: whitesmoke;
   transition: all 0.1s ease-in-out;
 }
 
@@ -19,17 +15,23 @@ body {
   z-index: -1; /* Set z-index to -1 to move circles behind sliders */
 }
 
-.chat-HIDDEN-bg-animation-contols{
+.chat-HIDDEN-bg-animation-contols {
   margin-left: 100%;
 }
 
+/* main.css */
 
-
-
-
+@import url(https://fonts.googleapis.com/css?family=Poppins:300);
 
 html {
   height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(#30142b, #2772a1);
 }
 
 .login-page {
@@ -79,6 +81,10 @@ h2 {
 .form .message a {
   color: #289bb8;
   text-decoration: none;
+}
+
+.form .register-form {
+  display: none;
 }
 
 .btn {

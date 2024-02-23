@@ -1,64 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  
-  <link rel="stylesheet" href="./style/main/main.css" id="main-content-theme">
-  <link rel="stylesheet" href="./style/header/header.css" id="header-content-theme">
-  <link rel="stylesheet" href="./style/login/login.css" id="login-content-theme">
-
-</head>
-<body>
-
-
-  <header>
-    <div class="header">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webleb - Login</title>
+    <link rel="stylesheet" href="./style/login/login.css" />
+    <script src="../scrips/login.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header">
         <a href="./index.html">INDEX</a>
-        <a href="./chat.html">CHAT</a>    
+        <a href="./chat.html">CHAT</a>
         <a href="./profile.html">PROFILE</a>
         <a href="./login.html">LOGIN</a>
-        <a href="./signup.html">SIGNUP</a>
+        <a href="./register.html">REGISTER</a>
       </div>
+    </header>
 
-  </header> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <div style="margin-left: 120%;">
-    <div>
-        <input type="checkbox" id="automationSwitch">
-        <label for="animationSwitch"></label>
+    <div style="margin-left: 120%">
+      <!-- Farbschalter- und Animationsschalter -->
     </div>
-    <div id="color-buttons">
-      <div id="blue-button" class="color-button"></div>
-      <div id="dynamic-rainbow-button" class="color-button"></div>
-      <div id="static-rainbow-button" class="color-button"></div>
-      <div id="dynamic-northernlights-color-button" class="color-button"></div>
-      <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
-      <div id="dynamic-snowymountain-color-button" class="color-button"></div>
-      <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
-    </div>
-  </div>
 
-  <script src="../scrips/script.js"></script>
-  <script src="../scrips/cookie.js"></script>
-  <script src="../scrips/darkmode.js"></script>
-  <script src="../scrips/backgroundAnimation.js"></script>
-</body>
+    <div class="login-page">
+      <div class="form">
+        <form class="login-form" method="POST">
+          <h2>Login</h2>
+          <input type="text" placeholder="Username" required />
+          <input type="password" placeholder="Password" required />
+          <a class="btn" href="#">
+            Sign in
+          </a>
+          <p class="message">
+            Not registered? <a href="./register.html">Create an account</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="../scrips/login.js"></script>
+    <script src="../scrips/cookie.js"></script>
+    <script src="../scrips/darkmode.js"></script>
+    <script src="../scrips/backgroundAnimation.js"></script>
+  </body>
 </html>
