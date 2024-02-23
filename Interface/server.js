@@ -82,7 +82,7 @@ app.post("/api/login", async (req, res) => {
 
 //Registration
 app.post("/api/register", async (req, res) => {
-  const { fullname, username, email, password: plainTextPassword } = req.body;
+  const { username, password: plainTextPassword } = req.body;
 
   if (!username || typeof username !== "string") {
     return res.json({ status: "error", error: "Invalid username" });
@@ -103,9 +103,7 @@ app.post("/api/register", async (req, res) => {
 
   try {
     const response = await User.create({
-      fullname,
       username,
-      email,
       password,
     });
     console.log("User created successfully: ", response);
@@ -113,7 +111,7 @@ app.post("/api/register", async (req, res) => {
     if (error.code === 11000) {
       return res.json({
         status: "error",
-        error: "Username/Email already in use",
+        error: "Username already in use",
       });
     }
     throw error;
