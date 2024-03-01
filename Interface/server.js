@@ -30,7 +30,7 @@ app.post("/api/change-password", async (req, res) => {
   if (plainTextPassword.length < 5) {
     return res.json({
       status: "error",
-      error: "Password too small. Should be atleast 6 characters",
+      error: "Password too small. Should be atleast 8 characters",
     });
   }
 
@@ -103,9 +103,7 @@ app.post("/api/register", async (req, res) => {
 
   try {
     const response = await User.create({
-      fullname,
       username,
-      email,
       password,
     });
     console.log("User created successfully: ", response);
@@ -113,7 +111,7 @@ app.post("/api/register", async (req, res) => {
     if (error.code === 11000) {
       return res.json({
         status: "error",
-        error: "Username/Email already in use",
+        error: "Username already in use",
       });
     }
     throw error;

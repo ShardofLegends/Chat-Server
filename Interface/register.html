@@ -36,15 +36,38 @@
 
     <div class="register-page">
       <div class="form">
-        <form class="register-form" id="reg-form" action="http://localhost:3000/sign_up" method="POST">
-            <h2>Register</h2>
-            <input type="text" id="fullname" name="fullname" placeholder="Full Name *" required />
-            <input type="text" id="username" name="username" placeholder="Username *" required />
-            <input type="email" id="email" name="email" placeholder="Email *" required />
-            <input type="password" id="password" name="password" placeholder="Password *" required />
-            <input type="submit" id="submitDetails" name="submitDetails" value="Create" class="btn" />
-            <p class="message">Already registered? <a href="./login.html">Sign In</a></p>
-          </form>
+        <form
+          class="register-form"
+          id="reg-form"
+          action="http://localhost:3000/sign_up"
+          method="POST"
+        >
+          <h2>Register</h2>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username *"
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password *"
+            required
+          />
+          <input
+            type="submit"
+            id="submitDetails"
+            name="submitDetails"
+            value="Create"
+            class="btn"
+          />
+          <p class="message">
+            Already registered? <a href="./login.html">Sign In</a>
+          </p>
+        </form>
       </div>
     </div>
 
