@@ -18,10 +18,9 @@ async function login(event) {
   }).then((res) => res.json());
 
   if (result.status === "ok") {
-    // everythign went fine
+    window.location.href = "../Interface/index.html";
     console.log("Got the token: ", result.data);
     localStorage.setItem("token", result.data);
-    alert("Success");
   } else {
     alert(result.error);
   }
