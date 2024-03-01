@@ -111,7 +111,7 @@ app.post("/api/register", async (req, res) => {
     if (error.code === 11000) {
       return res.json({
         status: "error",
-        error: "Username already in use",
+        error: "Username: " + username + " already in use",
       });
     }
     throw error;
