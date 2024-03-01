@@ -30,7 +30,7 @@ app.post("/api/change-password", async (req, res) => {
   if (plainTextPassword.length < 5) {
     return res.json({
       status: "error",
-      error: "Password too small. Should be atleast 6 characters",
+      error: "Password too small. Should be atleast 8 characters",
     });
   }
 
