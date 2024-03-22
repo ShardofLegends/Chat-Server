@@ -19,42 +19,6 @@ app.use("/", express.static(path.join(__dirname, "static")));
 app.use(bodyParser.json());
 app.use(cors(true));
 
-//Passwort ändern
-app.post("/api/change-password", async (req, res) => {
-  const { token, newpassword: plainTextPassword } = req.body;
-
-  if (!plainTextPassword || typeof plainTextPassword !== "string") {
-    return res.json({ status: "error", error: "Invalid password" });
-  }
-
-  if (plainTextPassword.length < 5) {
-    return res.json({
-      status: "error",
-      error: "Password too small. Should be atleast 6 characters",
-    });
-  }
-
-  try {
-    const user = jwt.verify(token, JWT_SECRET);
-
-    const _id = user.id;
-
-    const password = await bcrypt.hash(plainTextPassword, 10);
-
-    await User.updateOne(
-      { _id },
-      {
-        $set: { password },
-      }
-    );
-    res.json({ status: "ok" });
-  } catch (error) {
-    console.log(error);
-    res.json({ status: "error", error: ";))" });
-  }
-});
-
-//Login
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;
   const user = await User.findOne({ username }).lean(); //lean = umwandeln in JSON
@@ -80,7 +44,6 @@ app.post("/api/login", async (req, res) => {
   res.json({ status: "error", error: "Invalid username/password" });
 });
 
-//Registration
 app.post("/api/register", async (req, res) => {
   const { username, password: plainTextPassword } = req.body;
 
@@ -111,7 +74,7 @@ app.post("/api/register", async (req, res) => {
     if (error.code === 11000) {
       return res.json({
         status: "error",
-        error: "Username already in use",
+        error: "Username: " + username + " already in use",
       });
     }
     throw error;
