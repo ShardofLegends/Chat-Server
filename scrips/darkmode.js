@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// login.html
+// login.html / signup.html
 
 document.addEventListener("DOMContentLoaded", function () {
   const darkModeState = getCookie("darkModeEnabled");
@@ -114,49 +114,18 @@ document.addEventListener("DOMContentLoaded", function () {
   function applyTheme(darkModeEnabled) {
     const mainThemeLink = document.getElementById("main-content-theme");
     const headerThemeLink = document.getElementById("header-content-theme");
-    const loginThemeLink = document.getElementById("login-content-theme");
+    const loginsignupThemeLink = document.getElementById("login-signup-content-theme");
 
     if (darkModeEnabled) {
       // Dark mode is enabled, switch to dark mode CSS
       mainThemeLink.href = "./style/main/mainDM.css";
       headerThemeLink.href = "./style/header/headerDM.css";
-      loginThemeLink.href = "./style/login/loginDM.css";
+      loginsignupThemeLink.href = "./style/login-signup/login-signupDM.css";
     } else {
       // Dark mode is disabled, switch back to default CSS
       mainThemeLink.href = "./style/main/main.css";
       headerThemeLink.href = "./style/header/header.css";
-      loginThemeLink.href = "./style/login/loginDM.css";
-    }
-  }
-});
-
-
-// signup.html
-
-document.addEventListener("DOMContentLoaded", function () {
-  const darkModeState = getCookie("darkModeEnabled");
-  if (darkModeState === "true") {
-    applyTheme(true);
-  } else {
-    applyTheme(false);
-  }
-
-  // Function to apply theme
-  function applyTheme(darkModeEnabled) {
-    const mainThemeLink = document.getElementById("main-content-theme");
-    const headerThemeLink = document.getElementById("header-content-theme");
-    const signupThemeLink = document.getElementById("signup-content-theme");
-
-    if (darkModeEnabled) {
-      // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "./style/main/mainDM.css";
-      headerThemeLink.href = "./style/header/headerDM.css";
-      signupThemeLink.href = "./style/signup/signupDM.css";
-    } else {
-      // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "./style/main/main.css";
-      headerThemeLink.href = "./style/header/header.css";
-      signupThemeLink.href = "./style/signup/signup.css";
+      loginsignupThemeLink.href = "./style/login-signup/login-signup.css";
     }
   }
 });
