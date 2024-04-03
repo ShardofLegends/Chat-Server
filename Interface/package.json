@@ -1,10 +1,11 @@
 {
   "name": "interface",
+  "type": "module",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "concurrently \"node server.cjs\" \"node chatServer.js\""
   },
   "keywords": [],
   "author": "",
@@ -13,9 +14,14 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.2.0"
+    "mongoose": "^8.2.0",
+    "socket.io": "^4.7.5",
+    "socket.io-client": "^4.7.5"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }
