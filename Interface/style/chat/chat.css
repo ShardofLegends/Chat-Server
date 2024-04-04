@@ -193,6 +193,69 @@ body {
   background-color: #0056b3; /* Hervorgehobene Farbe beim Hover-Effekt */
 }
 
+.chat-display {
+  list-style-type: none;
+  width: 100%;
+  max-width: 122vh; /* Beispielhöhe, anpassen nach Bedarf */
+  border-radius: 10px;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: left;
+  overflow-y: auto; /* Vertikale Scrollleiste bei Bedarf anzeigen */
+  flex-grow: 1;
+}
+
+.post {
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 0 0 0.25rem;
+  margin: 0.5rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.post--left {
+  width: 60%;
+  align-self: flex-start;
+}
+
+.post--right {
+  width: 60%;
+  align-self: flex-end;
+}
+
+.post__header {
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post__header--user {
+  background-color: #00d973;
+}
+
+.post__header--reply {
+  background-color: #b8b8ff;
+}
+
+.post__header--name {
+  font-weight: bold;
+}
+
+.post__header--time {
+  font-size: 0.8rem;
+}
+
+.post__text {
+  margin-top: 5px;
+  color: #333;
+  padding: 0.25rem 0.5rem;
+}
+
 /* BACKGROUND ANIMATION */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
