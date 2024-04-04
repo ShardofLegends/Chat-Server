@@ -70,36 +70,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// index.html
-
-document.addEventListener("DOMContentLoaded", function () {
-  const darkModeState = getCookie("darkModeEnabled");
-  if (darkModeState === "true") {
-    applyTheme(true);
-  } else {
-    applyTheme(false);
-  }
-
-  // Function to apply theme
-  function applyTheme(darkModeEnabled) {
-    const mainThemeLink = document.getElementById("main-content-theme");
-    const headerThemeLink = document.getElementById("header-content-theme");
-    const indexThemeLink = document.getElementById("index-content-theme");
-
-    if (darkModeEnabled) {
-      // Dark mode is enabled, switch to dark mode CSS
-      mainThemeLink.href = "./style/main/mainDM.css";
-      headerThemeLink.href = "./style/header/headerDM.css";
-      indexThemeLink.href = "./style/index/indexDM.css";
-    } else {
-      // Dark mode is disabled, switch back to default CSS
-      mainThemeLink.href = "./style/main/main.css";
-      headerThemeLink.href = "./style/header/header.css";
-      indexThemeLink.href = "./style/index/index.css";
-    }
-  }
-});
-
 // login.html / signup.html
 
 document.addEventListener("DOMContentLoaded", function () {

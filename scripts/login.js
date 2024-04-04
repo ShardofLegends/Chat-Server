@@ -19,7 +19,7 @@ async function login(event) {
 
   if (result.status === "ok") {
     setCookie('username', username, 7);
-    window.location.href = "../Interface/index.html";
+    window.location.href = "../Interface/chat.html";
     console.log("Got the token: ", result.data);
     localStorage.setItem("token", result.data);
   } else {

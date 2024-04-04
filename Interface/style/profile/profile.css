@@ -20,6 +20,16 @@ button{
   border-color: rgb(196, 196, 196);
 }
 
+input[type="text"] {
+  resize: none;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
+}
+
 
 
 /* PROFILE CONTENT */

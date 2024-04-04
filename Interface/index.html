@@ -1,48 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  
-  <link rel="stylesheet" href="./style/main/main.css" id="main-content-theme">
-  <link rel="stylesheet" href="./style/header/header.css" id="header-content-theme">
-  <link rel="stylesheet" href="./style//index/index.css" id="index-content-theme">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FeelFree - Login</title>
+    
+    <link rel="stylesheet" href="./style/main/main.css" id="main-content-theme">
+    <link rel="stylesheet" href="./style/header/header.css" id="header-content-theme">
+    <link rel="stylesheet" href="./style/login-signup/login-signup.css" id="login-signup-content-theme">
 
-</head>
-<body>
+  </head>
+  <body>
 
 
-  <header>
-    <div class="header">
-      <a href="./index.html">INDEX</a>
-      <a href="./chat.html">CHAT</a>    
-      <a href="./profile.html">PROFILE</a>
-      <a href="./login.html">LOGIN</a>
-      <a href="./signup.html">SIGNUP</a>
+
+
+
+
+    <header>
+      <div class="header">
+        <div class="header-mainframe-flex">
+
+          <a href="./chat.html">
+            <div class="header-flex">
+                <img class="header-icons" src="./style/images/chat-blase.png" alt="">
+                <p class="header-text">Chat</p>
+            </div>
+          </a>
+
+          <a href="./profile.html">
+            <div class="header-flex">
+                <img class="header-icons" src="./style/images/profil.png" alt="">
+                <p class="header-text">Profile</p>
+            </div>
+          </a>
+
+          <a href="./index.html">
+            <div class="header-flex">
+                <img class="header-icons" src="./style/images/schneller-vorlauf.png" alt="">
+                <p class="header-text">Log&nbsp;out</p>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="login-signup-mainframe">
+      <form class="login-signup-form" id="login" >
+          <h2>Login</h2>
+          <input class="login-signup-userdata" type="text" id="username" name="username" placeholder="Username *" required />
+          <input class="login-signup-userdata" type="password" id="password" name="password" placeholder="Password *" required />
+
+          <input class="login-signup-submit-btn" type="submit" id="submitDetails" name="submitDetails" value="Login"/>
+
+          <p class="login-signup-message">Not registered? <a href="./signup.html">Create an account</a></p>
+        </form>
     </div>
 
-  </header> 
 
-<div style="margin-left: 120%;">
-  <label class="toggle-switch">
-      <input type="checkbox" id="automationSwitch">
-      <span class="toggle-switch-slider round"></span>
-  </label>
-  <div class="profile-grid-item-bg-animated-colors" id="color-buttons">
-      <div id="blue-button" class="color-button"></div>
-      <div id="dynamic-rainbow-button" class="color-button"></div>
-      <div id="static-rainbow-button" class="color-button"></div>
-      <div id="dynamic-northernlights-color-button" class="color-button"></div>
-      <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
-      <div id="dynamic-snowymountain-color-button" class="color-button"></div>
-      <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
-  </div>     
-</div>
 
-  <script src="../scripts/cookie.js"></script>
-  <script src="../scripts/script.js"></script>
-  <script src="../scripts/darkmode.js"></script>
-  <script src="../scripts/backgroundAnimation.js"></script>
-</body>
+    <div style="margin-left: 120%;">
+      <div>
+          <input type="checkbox" id="automationSwitch">
+          <label for="animationSwitch"></label>
+      </div>
+      <div id="color-buttons">
+        <div id="blue-button" class="color-button"></div>
+        <div id="dynamic-rainbow-button" class="color-button"></div>
+        <div id="static-rainbow-button" class="color-button"></div>
+        <div id="dynamic-northernlights-color-button" class="color-button"></div>
+        <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
+        <div id="dynamic-snowymountain-color-button" class="color-button"></div>
+        <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
+      </div>
+    </div>
+
+    <script src="../scripts/cookie.js"></script>
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/login.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/backgroundAnimation.js"></script>
+  </body>
 </html>
