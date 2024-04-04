@@ -1,117 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat Groups</title>
-
-    <link rel="stylesheet" href="./style/main/main.css" id="main-content-theme">
-    <link rel="stylesheet" href="./style/header/header.css" id="header-content-theme">
-    <link rel="stylesheet" href="./style/chat/chat.css" id="chat-content-theme">
-
-</head>
-<body>
-
-
+    <link
+      rel="stylesheet"
+      href="./style/main/main.css"
+      id="main-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/header/header.css"
+      id="header-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/chat/chat.css"
+      id="chat-content-theme"
+    />
+  </head>
+  <body>
     <header>
-        <div class="header">
-            <a href="./index.html">INDEX</a>
-            <a href="./chat.html">CHAT</a>    
-            <a href="./profile.html">PROFILE</a>
-            <a href="./login.html">LOGIN</a>
-            <a href="./signup.html">SIGNUP</a>
-          </div>
-
-    </header> 
-
+      <div class="header">
+        <a href="./index.html">INDEX</a>
+        <a href="./chat.html">CHAT</a>
+        <a href="./profile.html">PROFILE</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./signup.html">SIGNUP</a>
+      </div>
+    </header>
 
     <div class="chat-mainframe-flex">
-        <div class="chat-overview-space">
-            <div class="chat-overview-flexbox">
-                <div>
-                    <p class="groups-overview-title">TEST</p>
-                </div>
-                <div class="groups-overview-grid">
-                    <div class="placeholder"></div>
-                    <div class="grid-item">general</div>
-                    <div class="grid-item">2</div>
-                    <div class="grid-item">3</div>
-                    <div class="grid-item">4</div>
-                    <div class="grid-item">5</div>
-                    <div class="grid-item">6</div>
-                    <div class="grid-item">7</div>
-                    <div class="grid-item">8</div>
-                    <div class="grid-item">9</div>
-                    <div class="grid-item">10</div>
-                    <div class="grid-item">11</div>
-                    <div class="grid-item">12</div>
-                    <div class="grid-item">13</div>
-                    <div class="grid-item">14</div>
-                    <div class="grid-item">15</div>
-                    <div class="grid-item">16</div>
-                    <div class="grid-item">17</div>
-                    <div class="grid-item">18</div>
-                    <div class="grid-item">19</div>
-                    <div class="grid-item">20</div>
-                    <div class="grid-item">21</div>
-                    <div class="grid-item">22</div>
-                    <div class="grid-item">23</div>
-                    <div class="grid-item">24</div>
-                    <div class="grid-item">25</div>
-                    <div class="grid-item">26</div>
-                    <div class="grid-item">27</div>
-                    <div class="grid-item">28</div>
-                    <div class="grid-item">29</div>
-                </div>
-            </div>
+      <div class="chat-overview-space">
+        <div class="chat-overview-flexbox">
+          <div>
+            <p class="groups-overview-title">TEST</p>
+          </div>
+          <div class="groups-overview-grid">
+            <div class="placeholder"></div>
+            <div class="grid-item" id="general">general</div>
+            <div class="grid-item" id="REF">REF</div>
+            <div class="grid-item" id="IMS">IMS</div>
+            <div class="grid-item" id="WMS">WMS</div>
+            <div class="grid-item" id="FMS">FMS</div>
+            <div class="grid-item" id="GBS">GBS</div>
+            <!-- Weitere Chatrooms hier hinzufügen -->
+          </div>
         </div>
+      </div>
 
+      <div class="chat-text-space">
+        <div class="chat-details">
+          <ul class="chat-display"></ul>
 
+          <p class="user-list"></p>
 
+          <p class="room-list"></p>
 
+          <p class="activity"></p>
 
-        <div class="chat-text-space">
-            <div class="chat-details">
-                <div class="chat-header">
-                  <p class="chat-title">Chatroom Name</p>
-                </div>
-                <div class="message-container">
-                  <!-- Hier werden die Nachrichten angezeigt -->
-                </div>
-                <div class="message-input">
-                    <div>
-                        <input type="text" placeholder="Nachricht eingeben...">
-                    </div>
-                    <div>
-                        <button>Senden</button>
-                    </div>
-                </div>
-              </div>              
+          <form class="form-msg">
+            <input
+              type="text"
+              id="message"
+              placeholder="Your message"
+              required
+            />
+            <button type="submit">Send</button>
+          </form>
         </div>
-
-
-
-    </div>
-    
-    <div style="margin-left: 120%;">
-        <div>
-            <input type="checkbox" id="automationSwitch">
-            <label for="animationSwitch"></label>
-        </div>
-        <div id="color-buttons">
-            <div id="blue-button" class="color-button"></div>
-            <div id="dynamic-rainbow-button" class="color-button"></div>
-            <div id="static-rainbow-button" class="color-button"></div>
-            <div id="dynamic-northernlights-color-button" class="color-button"></div>
-            <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
-            <div id="dynamic-snowymountain-color-button" class="color-button"></div>
-            <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
-        </div>
+      </div>
     </div>
 
-    <script src="../scrips/cookie.js"></script>
-    <script src="../scrips/darkmode.js"></script>
-    <script src="../scrips/backgroundAnimation.js"></script>
+    <div style="margin-left: 120%">
+      <div>
+        <input type="checkbox" id="automationSwitch" />
+        <label for="animationSwitch"></label>
+      </div>
+      <div id="color-buttons">
+        <div id="blue-button" class="color-button"></div>
+        <div id="dynamic-rainbow-button" class="color-button"></div>
+        <div id="static-rainbow-button" class="color-button"></div>
+        <div
+          id="dynamic-northernlights-color-button"
+          class="color-button"
+        ></div>
+        <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
+        <div id="dynamic-snowymountain-color-button" class="color-button"></div>
+        <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
+      </div>
+    </div>
 
-</body>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.min.js"
+      integrity="sha512-Xm9qbB6Pu06k3PUwPj785dyTl6oHxgsv9nHp7ej7nCpAqGZT3OZpsELuCYX05DdonFpTlBpXMOxjavIAIUwr0w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="../scripts/cookie.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/socket.io/client-dist/socket.io.js"></script>
+    <script src="../scripts/chat.js"></script>
+    <!-- <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/backgroundAnimation.js"></script> -->
+  </body>
 </html>

@@ -1,4 +1,3 @@
-
 // Function to set a cookie
 function setCookie(name, value, days) {
     const expires = new Date();
@@ -22,4 +21,3 @@ function setCookie(name, value, days) {
     }
     return null;
 }
-  

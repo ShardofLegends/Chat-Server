@@ -1,12 +1,12 @@
-const form = document.getElementById("login");
-form.addEventListener("submit", login);
+const form = document.getElementById("reg-form");
+form.addEventListener("submit", registerUser);
 
-async function login(event) {
+async function registerUser(event) {
   event.preventDefault();
   const username = document.getElementById("username").value;
   const password = document.getElementById("password").value;
 
-  const result = await fetch("http://localhost:9999/api/login", {
+  const result = await fetch("http://localhost:9999/api/register", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -18,9 +18,9 @@ async function login(event) {
   }).then((res) => res.json());
 
   if (result.status === "ok") {
+    // everything went fine
+    setCookie('username', username, 7);
     window.location.href = "../Interface/index.html";
-    console.log("Got the token: ", result.data);
-    localStorage.setItem("token", result.data);
   } else {
     alert(result.error);
   }

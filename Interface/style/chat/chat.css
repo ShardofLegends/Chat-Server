@@ -1,23 +1,22 @@
-
 /* CHAT MAIN */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
 body {
-  background-color: rgb(255, 255, 255); /* Background color for better visibility */
+  background-color: rgb(
+    255,
+    255,
+    255
+  ); /* Background color for better visibility */
   color: black;
 
   margin: 0;
   overflow: hidden;
 }
 
-
-
-
 /* CHAT CONTENT */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
-
 
 .chat-mainframe-flex {
   display: flex;
@@ -26,36 +25,36 @@ body {
   height: 90%;
 }
 
-
-
-
 /* CHAT GROUPS */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
-
 
 .chat-overview-space {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 28%; 
+  width: 28%;
   height: 90%;
 
   border-top-right-radius: 30px;
 
   box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-  
+
   border-width: 1px;
   border-style: solid solid hidden hidden;
   border-color: rgba(196, 196, 196, 0.329);
 
-  background-image: linear-gradient(70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(
+    70deg,
+    rgba(0, 0, 0, 0.125),
+    rgba(255, 255, 255, 0.06)
+  );
   backdrop-filter: blur(150px); /* Blur behind the element */
 
   overflow: hidden;
 }
 
-.chat-overview-flexbox{
+.chat-overview-flexbox {
   display: flex;
   flex-direction: column;
 
@@ -63,8 +62,7 @@ body {
   height: 110%;
 }
 
-.groups-overview-title{
-
+.groups-overview-title {
   font-size: 30px;
   padding-left: 20px;
 
@@ -73,28 +71,25 @@ body {
   z-index: 1;
 }
 
-.groups-overview-grid{
+.groups-overview-grid {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 9% minmax(100px, auto); 
+  grid-template-rows: 9% minmax(100px, auto);
   grid-auto-rows: minmax(100px, auto);
   gap: 5px;
 
   bottom: 0;
   left: 0;
   width: 99%;
-  height: 100%;  
+  height: 100%;
 
   overflow-y: scroll;
 
   -webkit-mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
-          mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
-
+  mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
 }
 
-
 .grid-item {
-
   background-color: rgba(255, 255, 255);
   border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 10px;
@@ -102,36 +97,36 @@ body {
   padding: 20px;
   font-size: 30px;
   text-align: center;
-
 }
-
 
 /* CHAT TEXTING */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
 
-  
 .chat-text-space {
   position: absolute;
   bottom: 0;
   right: 0;
-  width:70%; 
+  width: 70%;
   height: 90%;
 
   border-top-left-radius: 30px;
 
   box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-  
+
   border-width: 1px;
   border-style: solid hidden hidden solid;
   border-color: rgba(196, 196, 196, 0.329);
 
-  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
+  background-image: linear-gradient(
+    -70deg,
+    rgba(0, 0, 0, 0.125),
+    rgba(255, 255, 255, 0.06)
+  );
   backdrop-filter: blur(150px); /* Blur behind the element */
 
   overflow: hidden;
 }
-
 
 .flex-container {
   display: flex;
@@ -164,83 +159,43 @@ body {
   overflow-y: scroll; /* Scrollen ermöglichen */
 }
 
-.message-input {
+.form-msg {
   display: flex;
-
   width: 80%;
-
   margin: auto;
-
   height: fit-content;
   justify-content: space-between;
-
   margin-bottom: 30px;
 }
 
-.message-input input[type="text"] {
-
+.form-msg input[type="text"] {
+  flex: 1; /* Das Texteingabefeld soll den verfügbaren Platz nutzen */
   width: 600px;
-  
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
-  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
+  box-sizing: border-box;
 }
 
-.message-input button {
-
-  width: 10%;
-  
+.form-msg button {
+  width: 100px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-right: 10px;
-
-  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
-
-  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
-
-
   background-color: #007bff;
   color: #fff;
   border: none;
-
   cursor: pointer;
-  box-sizing: border-box; /* Innenabstand in die Breite einbeziehen */
-
-  position: absolute;
-
-  border-radius: 5px;
-
-  box-shadow: 0 8px 32px 0 rgba(63, 63, 63, 0.37); /* Glassy shadow effect */
-  
-  border-width: 1px;
-  border-style: solid hidden hidden solid;
-  border-color: rgba(196, 196, 196, 0.329);
-
-  background-image: linear-gradient(-70deg, rgba(0, 0, 0, 0.125), rgba(255, 255, 255, 0.06));
-  backdrop-filter: blur(150px); /* Blur behind the element */
-
-  transition: background-color 0.3s ease;
-
-  overflow: hidden;
-
+  margin-left: 10px;
 }
 
-.message-input button:hover {
+.form-msg button:hover {
   background-color: #0056b3; /* Hervorgehobene Farbe beim Hover-Effekt */
 }
-
-
-
-
-
 
 /* BACKGROUND ANIMATION */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
-
 
 .moving-circle {
   position: absolute;
@@ -252,7 +207,6 @@ body {
   z-index: -1; /* Set z-index to -1 to move circles behind sliders */
 }
 
-
-.chat-HIDDEN-bg-animation-contols{
+.chat-HIDDEN-bg-animation-contols {
   margin-left: 100%;
 }
