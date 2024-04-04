@@ -17,7 +17,7 @@ mongoose.connect(
 const app = express();
 app.use("/", express.static(path.join(__dirname, "static")));
 app.use(bodyParser.json());
-app.use(cors(true));
+app.use(cors());
 
 app.post("/api/login", async (req, res) => {
   const { username, password } = req.body;

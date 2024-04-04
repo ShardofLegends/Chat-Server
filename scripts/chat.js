@@ -38,16 +38,20 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funktion zum Betreten des Chatrooms
   function enterRoom(e) {
     e.preventDefault();
-    if (nameInput && chatRoom.value) {
+    const nameInput = getCookie("username"); // Holen Sie sich den Benutzernamen
+    const roomName = chatRoom.textContent.trim(); // Holen Sie sich den Raumnamen
+
+    if (nameInput && roomName) {
+      // Überprüfen, ob Benutzername und Raumname vorhanden sind
       socket.emit("enterRoom", {
-        name: nameInput,
-        room: chatRoom.textContent,
+        name: nameInput, // Benutzername senden
+        room: roomName, // Raumnamen senden
       });
     }
   }
 
-  // // Event-Listener für das Absenden des Formulars beim Betreten des Chatrooms
-  // document.querySelector(".form-join").addEventListener("submit", enterRoom);
+  // Event-Listener für das Absenden des Formulars beim Betreten des Chatrooms
+  document.querySelector(".form-msg").addEventListener("submit", enterRoom);
 
   // Event-Listener für das Tastendruck-Ereignis im Eingabefeld für Nachrichten
   msgInput.addEventListener("keypress", () => {
@@ -57,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Funktion zum automatischen Betreten des General-Chatrooms
   function joinGeneralChat() {
     socket.emit("enterRoom", {
-      name: "Username",
+      name: nameInput,
       room: "general",
     });
   }
