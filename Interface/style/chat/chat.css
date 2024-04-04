@@ -165,7 +165,7 @@ body {
   margin: auto;
   height: fit-content;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 6%;
 }
 
 .form-msg input[type="text"] {
@@ -254,6 +254,38 @@ body {
   margin-top: 5px;
   color: #333;
   padding: 0.25rem 0.5rem;
+}
+
+#send-button {
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+
+  border-radius: 5px;
+
+  background: rgb(58, 183, 211);
+
+  backdrop-filter: blur(150px); /* Blur behind the element */
+
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(196, 196, 196, 0.329);
+
+  overflow: hidden;
+}
+
+#send-button:hover {
+  background: #289bb8;
+  box-shadow: 0 0 5px #289bb8, 0 0 25px #289bb8, 0 0 50px #289bb8,
+    0 0 100px #289bb8;
+
+  border-radius: 5px;
+
+  border-width: 1px;
+  border-style: solid solid hidden hidden;
+  border-color: rgba(196, 196, 196, 0.329);
+
+  overflow: hidden;
 }
 
 /* BACKGROUND ANIMATION */
