@@ -10,6 +10,17 @@ body {
   transition: all 0.1s ease-in-out;
 }
 
+button{
+  width: 80px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
+}
+
+
 
 /* PROFILE CONTENT */
 /*-------------------------------------------------------------------------------*/
@@ -87,10 +98,6 @@ body {
   height: 100%;
 }
 
-.profile-user-information {
-  margin: 0px;
-}
-
 .profile-user-picture {
 
   width: 100%;
@@ -125,6 +132,25 @@ body {
   object-fit: cover;
 }
 
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+
+  margin: auto;
+  padding: 8px;
+  cursor: pointer;
+
+  width: fit-content;
+  height: fit-content;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
+}
+
 
 /* PROFILE USER DATA */
 /*-------------------------------------------------------------------------------*/
@@ -132,8 +158,8 @@ body {
 .profile-user-grid {
   display: grid;
 
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(1fr);
 
   padding: 30px;
 
@@ -180,6 +206,17 @@ body {
 }
 .saveButton {
   display: none;
+}
+
+.profile-user-description{
+  resize: none;
+  margin-left: 20px;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(196, 196, 196);
 }
 
 
