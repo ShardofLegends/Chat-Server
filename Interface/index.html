@@ -24,13 +24,12 @@
 
   </header> 
 
-
-  <div style="margin-left: 120%;">
-    <div>
-        <input type="checkbox" id="automationSwitch">
-        <label for="animationSwitch"></label>
-    </div>
-    <div id="color-buttons">
+<div style="margin-left: 120%;">
+  <label class="toggle-switch">
+      <input type="checkbox" id="automationSwitch">
+      <span class="toggle-switch-slider round"></span>
+  </label>
+  <div class="profile-grid-item-bg-animated-colors" id="color-buttons">
       <div id="blue-button" class="color-button"></div>
       <div id="dynamic-rainbow-button" class="color-button"></div>
       <div id="static-rainbow-button" class="color-button"></div>
@@ -38,10 +37,11 @@
       <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
       <div id="dynamic-snowymountain-color-button" class="color-button"></div>
       <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
-    </div>
-  </div>
+  </div>     
+</div>
 
   <script src="../scripts/cookie.js"></script>
+  <script src="../scripts/script.js"></script>
   <script src="../scripts/darkmode.js"></script>
   <script src="../scripts/backgroundAnimation.js"></script>
 </body>
