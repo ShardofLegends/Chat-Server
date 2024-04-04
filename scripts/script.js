@@ -112,3 +112,29 @@ document.querySelectorAll('.profile-user-datafield').forEach((container, index) 
         }
     });
 });
+
+//Show username
+document.addEventListener("DOMContentLoaded", function () {
+  // Funktion zum Lesen des Benutzernamens aus dem Cookie
+  function getUsernameFromCookie() {
+    const cookies = document.cookie.split(';');
+    for (let cookie of cookies) {
+      const [name, value] = cookie.split('=');
+      if (name.trim() === 'username') {
+        return decodeURIComponent(value);
+      }
+    }
+    return null; // Wenn kein Cookie gefunden wurde
+  }
+
+  // HTML-Element für den Benutzernamen
+  const usernameElement = document.querySelector(".currentName");
+
+  // Den Benutzernamen aus dem Cookie lesen
+  const username = getUsernameFromCookie();
+
+  // Den Benutzernamen in das HTML-Element einfügen, falls vorhanden
+  if (username) {
+    usernameElement.textContent = username;
+  }
+});

@@ -1,128 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Your Profile</title>
 
-    <link rel="stylesheet" href="./style/main/main.css" id="main-content-theme">
-    <link rel="stylesheet" href="./style/header/header.css" id="header-content-theme">
-    <link rel="stylesheet" href="./style/profile/profile.css" id="profile-content-theme">
-
-</head>
-<body>
-
+    <link
+      rel="stylesheet"
+      href="./style/main/main.css"
+      id="main-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/header/header.css"
+      id="header-content-theme"
+    />
+    <link
+      rel="stylesheet"
+      href="./style/profile/profile.css"
+      id="profile-content-theme"
+    />
+  </head>
+  <body>
     <header>
-        <div class="header">
-            <a href="./index.html">INDEX</a>
-            <a href="./chat.html">CHAT</a>    
-            <a href="./profile.html">PROFILE</a>
-            <a href="./login.html">LOGIN</a>
-            <a href="./signup.html">SIGNUP</a>
+      <div class="header">
+        <a href="./index.html">INDEX</a>
+        <a href="./chat.html">CHAT</a>
+        <a href="./profile.html">PROFILE</a>
+        <a href="./login.html">LOGIN</a>
+        <a href="./signup.html">SIGNUP</a>
+      </div>
+    </header>
+
+    <div class="profile-mainframe-flex">
+      <div class="profile-main-space">
+        <div>
+          <p class="profile-main-title">Your Profile</p>
+        </div>
+        <div class="profile-main-flexbox">
+          <div class="profile-user-flexbox">
+            <div class="profile-user-picture">
+              <div id="profilePicture"></div>
+            </div>
+
+            <label for="fileInput" class="custom-file-upload">
+              Change Profile Picture
+            </label>
+            <input type="file" id="fileInput" accept="image/*" />
           </div>
 
-    </header> 
-    
-    <div class="profile-mainframe-flex">
-
-        <div class="profile-main-space">
-            <div>
-                <p class="profile-main-title">Your Profile</p>
-            </div>
-            <div class="profile-main-flexbox">
-
-                <div class="profile-user-flexbox">
-
-                    <div class="profile-user-picture">
-                        <div id="profilePicture"></div>
-                    </div>
-
-                    <label for="fileInput" class="custom-file-upload">
-                        Change Profile Picture
-                    </label>
-                    <input type="file" id="fileInput" accept="image/*">
+          <div class="profile-user-flexbox">
+            <div class="profile-user-grid">
+              <div class="profile-user-grid-item">
+                <p>Your Username</p>
+                <div class="profile-user-datafield">
+                  <p class="currentName">USERNAME</p>
+                  <input type="text" class="newNameInput" />
+                  <button class="editButton">Edit</button>
+                  <button class="saveButton">Save</button>
                 </div>
+              </div>
 
-                <div class="profile-user-flexbox">
+              <hr class="profile-user-grid-hrtag" />
 
-                    <div class="profile-user-grid">
-
-                        <div class="profile-user-grid-item">
-                            <p >Your Username</p>
-                            <div class="profile-user-datafield">
-                                <p class="currentName">USERNAME</p>
-                                <input type="text" class="newNameInput">
-                                <button class="editButton">Edit</button>
-                                <button class="saveButton">Save</button>
-                            </div>
-                        </div>
-
-                        <hr class="profile-user-grid-hrtag"/>
-
-                        <div class="profile-user-grid-item">
-                            <p >My Password</p>
-                            <div class="profile-user-datafield">
-                                <p class="currentName">PASSWORD</p>
-                                <input type="text" class="newNameInput">
-                                <button class="editButton">Edit</button>
-                                <button class="saveButton">Save</button>
-                            </div>
-                        </div>
-                        
-                        <hr class="profile-user-grid-hrtag"/>
-
-                        <div class="profile-user-grid-item">
-                            <p style="width: min-content;" >Profile Description</p>
-                            <textarea class="profile-user-description" id="" cols="46" rows="10"></textarea>
-                        </div>
-                    </div>
-
+              <div class="profile-user-grid-item">
+                <p>My Password</p>
+                <div class="profile-user-datafield">
+                  <p class="currentName">************</p>
+                  <input type="text" class="newNameInput" />
+                  <button class="editButton">Edit</button>
+                  <button class="saveButton">Save</button>
                 </div>
+              </div>
+
+              <hr class="profile-user-grid-hrtag" />
+
+              <div class="profile-user-grid-item">
+                <p style="width: min-content">Profile Description</p>
+                <textarea
+                  class="profile-user-description"
+                  id=""
+                  cols="46"
+                  rows="10"
+                ></textarea>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
 
-        <div class="profile-settings-space">
-            <div class="profile-settings-flexbox">
-                <div>
-                    <p class="profile-settings-title">Settings</p>
-                </div>
-                <div class="profile-settings-grid">
+      <div class="profile-settings-space">
+        <div class="profile-settings-flexbox">
+          <div>
+            <p class="profile-settings-title">Settings</p>
+          </div>
+          <div class="profile-settings-grid">
+            <div class="profile-grid-placeholder"></div>
 
-                    <div class="profile-grid-placeholder"></div>
-
-                    <div class="profile-grid-item">
-                        <p class="profile-switch-title">Dark Mode</p>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="dark-mode-toggle">
-                            <span class="toggle-switch-slider round"></span>
-                        </label>
-                    </div>
-                    <hr class="profile-grid-hrtag"/>
-                    <div class="profile-grid-item">
-                        <p class="profile-switch-title">Background Animation</p>
-                        <label class="toggle-switch">
-                            <input type="checkbox" id="automationSwitch">
-                            <span class="toggle-switch-slider round"></span>
-                        </label>
-                    </div>
-                    <div class="profile-grid-item-bg-animated-colors" id="color-buttons">
-                        <div id="blue-button" class="color-button"></div>
-                        <div id="dynamic-rainbow-button" class="color-button"></div>
-                        <div id="static-rainbow-button" class="color-button"></div>
-                        <div id="dynamic-northernlights-color-button" class="color-button"></div>
-                        <div id="dynamic-sunsetfeeling-color-button" class="color-button"></div>
-                        <div id="dynamic-snowymountain-color-button" class="color-button"></div>
-                        <div id="dynamic-pinkbluecyan-color-button" class="color-button"></div>
-                    </div>                
-                </div>
+            <div class="profile-grid-item">
+              <p class="profile-switch-title">Dark Mode</p>
+              <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-toggle" />
+                <span class="toggle-switch-slider round"></span>
+              </label>
             </div>
+            <hr class="profile-grid-hrtag" />
+            <div class="profile-grid-item">
+              <p class="profile-switch-title">Background Animation</p>
+              <label class="toggle-switch">
+                <input type="checkbox" id="automationSwitch" />
+                <span class="toggle-switch-slider round"></span>
+              </label>
+            </div>
+            <div
+              class="profile-grid-item-bg-animated-colors"
+              id="color-buttons"
+            >
+              <div id="blue-button" class="color-button"></div>
+              <div id="dynamic-rainbow-button" class="color-button"></div>
+              <div id="static-rainbow-button" class="color-button"></div>
+              <div
+                id="dynamic-northernlights-color-button"
+                class="color-button"
+              ></div>
+              <div
+                id="dynamic-sunsetfeeling-color-button"
+                class="color-button"
+              ></div>
+              <div
+                id="dynamic-snowymountain-color-button"
+                class="color-button"
+              ></div>
+              <div
+                id="dynamic-pinkbluecyan-color-button"
+                class="color-button"
+              ></div>
+            </div>
+          </div>
         </div>
-
+      </div>
     </div>
 
     <script src="../scripts/cookie.js"></script>
     <script src="../scripts/script.js"></script>
     <script src="../scripts/darkmode.js"></script>
     <script src="../scripts/backgroundAnimation.js"></script>
-</body>
+  </body>
 </html>
