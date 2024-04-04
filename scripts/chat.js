@@ -111,13 +111,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   });
 
-  socket.on("userList", ({ users }) => {
-    showUsers(users);
-  });
+  // socket.on("userList", ({ users }) => {
+  //   showUsers(users);
+  // });
 
-  socket.on("roomList", ({ rooms }) => {
-    showRooms(rooms);
-  });
+  // socket.on("roomList", ({ rooms }) => {
+  //   showRooms(rooms);
+  // });
 
   // function showUsers(users) {
   //   usersList.textContent = "";
