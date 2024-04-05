@@ -90,13 +90,19 @@ body {
 }
 
 .grid-item {
-  background-color: rgba(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  background-color: rgba(141, 140, 140, 0.392);
+  border: 1px solid rgba(51, 51, 51, 0.8);
   border-radius: 10px;
 
-  padding: 20px;
+  padding: 40px;
   font-size: 30px;
+  margin: 3px 8px 3px 8px;
   text-align: center;
+}
+
+.grid-item-text {
+  margin-top: 300px;
+  margin: auto;
 }
 
 /* CHAT TEXTING */
@@ -202,7 +208,7 @@ body {
   display: flex;
   flex-flow: column;
   justify-content: left;
-  overflow-y: auto; /* Vertikale Scrollleiste bei Bedarf anzeigen */
+  overflow-y: scroll; /* Vertikale Scrollleiste bei Bedarf anzeigen */
   flex-grow: 1;
 }
 
