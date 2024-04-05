@@ -22,6 +22,18 @@ button{
 }
 
 
+input[type="text"] {
+  resize: none;
+  padding: 5px;
+  color: white;
+  background-color: rgba(53, 53, 53, 0.6);
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(74, 74, 74);
+}
+
+
 /* PROFILE CONTENT */
 /*-------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------*/
@@ -103,10 +115,8 @@ button{
 }
 
 .profile-user-picture {
-
   width: 100%;
   height: 50%;
-
 }
 
 .profile-user-username {
@@ -128,6 +138,7 @@ button{
   overflow: hidden;
 
   background-color: rgba(0, 0, 0, 0.438); /* Default background color */
+  
 }
 
 #profilePicture img {

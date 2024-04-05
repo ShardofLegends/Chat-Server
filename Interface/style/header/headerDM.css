@@ -1,12 +1,6 @@
-
-/*-------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------*/
-
-/* CHAT DARK MODE */
-
-/*-------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------*/
-
+*{
+    transition: all 0.1s ease-in-out;
+}
 
 .header {
     position: absolute;
@@ -24,3 +18,67 @@
   
     overflow: hidden;
 }
+
+
+.header-icons{
+    width: 20%;
+    height: 20%;
+    padding: 5px;
+}
+
+.header-text{
+    font-size: 125%;
+    margin: auto 3px auto 3px;
+    width: 30%;
+}
+
+.header-mainframe-flex{
+    width: 30%;
+    height: 100%;
+    margin: 15px auto 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+.header-flex {
+    display: flex;
+    flex-direction: row;
+
+    margin: auto 3px auto 3px;
+}
+
+.header-flex:hover {
+    display: flex;
+    flex-direction: row;
+
+    padding: 4px;
+
+    margin: auto 3px auto 3px;
+}
+
+
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* selected link */
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
