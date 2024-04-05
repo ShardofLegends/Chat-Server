@@ -67,13 +67,13 @@ io.on("connection", (socket) => {
     // To user who joined
     socket.emit(
       "message",
-      buildMsg(ADMIN, `You have joined the ${user.room} chat room`)
+      buildMsg(ADMIN, `You have joined the ${user.room} chat`)
     );
 
     // To everyone else
     socket.broadcast
       .to(user.room)
-      .emit("message", buildMsg(ADMIN, `${user.name} has joined the room`));
+      .emit("message", buildMsg(ADMIN, `${user.name} has joined the chat`));
 
     // Update user list for room
     io.to(user.room).emit("userList", {
