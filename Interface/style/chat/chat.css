@@ -49,54 +49,51 @@ body {
     rgba(0, 0, 0, 0.125),
     rgba(255, 255, 255, 0.06)
   );
-  backdrop-filter: blur(150px); /* Blur behind the element */
+  backdrop-filter: blur(150px);
 
   overflow: hidden;
 }
 
 .chat-overview-flexbox {
+  position: relative;
   display: flex;
   flex-direction: column;
-
   width: 100%;
-  height: 110%;
+  height: 100%;
 }
 
 .groups-overview-title {
   font-size: 30px;
   padding-left: 20px;
-
-  position: absolute;
-
   z-index: 1;
+  margin-top: 40px;
 }
 
 .groups-overview-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: 9% minmax(100px, auto);
   grid-auto-rows: minmax(100px, auto);
   gap: 5px;
-
-  bottom: 0;
-  left: 0;
-  width: 99%;
-  height: 100%;
-
-  overflow-y: scroll;
-
-  -webkit-mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
-  mask-image: linear-gradient(to bottom, transparent 7%, black 100px);
+  flex: 1;
+  overflow-y: auto;
 }
 
 .grid-item {
   background-color: rgba(255, 255, 255);
   border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 10px;
-
   padding: 20px;
   font-size: 30px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-item a {
+  text-decoration: none;
+  color: black;
 }
 
 /* CHAT TEXTING */
